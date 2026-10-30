@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "scenario": {
+    "name": "ubi_500",
+    "substitution": 25,
+    "productivity": 30,
+    "speed": 10,
+    "ubi": 500,
+    "tax": 0
+  },
+  "assumptions": {
+    "feedback": true,
+    "dividend": true,
+    "clipping": true,
+    "demand_strength": 0.42,
+    "tax_adoption_penalty": 0.45
+  },
+  "years": 10,
+  "units": "annual thousand USD per model household; employment percent; concentration index"
+}
