@@ -1,0 +1,25 @@
+{
+  "python": "3.12.14",
+  "pytest": "..............                                                           [100%]\n14 passed in 0.24s",
+  "upstream_parity": {
+    "cases": 5,
+    "years": 11,
+    "fields": 13,
+    "comparisons": 715,
+    "tolerance": "rtol=atol=1e-12"
+  },
+  "pilot": {
+    "runs": 100,
+    "annual_rows": 1100
+  },
+  "notebook_code_cells_sequential_smoke": {
+    "passed": true,
+    "cells": 6,
+    "method": "fresh Python namespace; no live Jupyter kernel"
+  },
+  "notebook_clean_kernel": "pending: sandbox denies TCP and IPC kernel sockets",
+  "windows_macos": "not tested",
+  "main_experiments": "not run",
+  "paper": "scaffold only",
+  "repository": "https://github.com/ElaineYiyaoLiu/AAI551-SecondOrder"
+}

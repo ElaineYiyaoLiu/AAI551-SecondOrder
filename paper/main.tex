@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,booktabs,hyperref}
+\title{Demand Feedback in Automation Scenarios}
+\author{Elaine Liu}
+\date{Working scaffold}
+\begin{document}
+\maketitle
+\begin{abstract}
+This incomplete research scaffold accompanies a verified Python translation of a
+stylized automation model. Main experiments and reviewed theoretical results are
+pending. No substantive research conclusion is asserted here.
+\end{abstract}
+\section{Research question}
+Which policy responses follow from the recurrence structure, and which policy
+rankings depend on demand feedback, adoption incentives, dividends and clipping?
+\section{Model and interpretation}
+The source and units are documented in the accompanying model specification.
+Annual demand uses previous consumption and dividends use previous concentration.
+The model is illustrative and has not been empirically calibrated.
+\section{Candidate structural analysis}
+Fix a common adoption path, remove dividends, and restrict to an unclipped branch
+with employment below 95. Write $E_t=k_tD_t$ and $L_t=l_tE_t$, with positive
+coefficients determined by adoption and common scenario inputs. Benefits are
+$0.12(95-E_t)$ and $C_t=0.75[L_t+0.12(95-E_t)+u]$, where $u$ is annual UBI in
+thousand USD. On this branch, with $D_t=1+\alpha(C_{t-1}/45-1)$,
+\[
+\frac{\partial C_t}{\partial u}=0.75\left[1+(l_t-0.12)k_t\frac{\alpha}{45}
+\frac{\partial C_{t-1}}{\partial u}\right].
+\]
+Common policy-independent initial consumption implies zero employment response
+in year one. Nonnegative feedback and $l_t\geq0.12$ imply nonnegative consumption
+response while this branch remains valid. This is a candidate derivation awaiting
+independent verification, branch checks, and related-work assessment.
+\section{Experiment design}
+E0 checks cross-language numerical parity. The exploratory pilot uses 25 common
+assumption pairs and four policies. E1--E5 remain planned and the main protocol
+has not been frozen. All comparisons exclude the base year from temporal means.
+\section{Results pending}
+Insert independently verified results, mechanism traces, and boundary witnesses.
+\section{Limitations}
+Model-specific statements do not establish empirical policy effects. Household
+income and fiscal balance are partial accounting constructs. Numerical clamps
+affect interpretation. Finite grids cannot certify an entire continuous domain.
+\section{Reproducibility and assistance}
+The code records inputs, source hashes and annual outputs. AI assisted code,
+documentation and exploratory analysis. Author review remains pending.
+\section{Related work pending verification}
+Verify primary literature before adding citations and novelty claims.
+\end{document}

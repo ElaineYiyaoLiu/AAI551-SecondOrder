@@ -1,0 +1,1817 @@
+{
+  "status": "exploratory_pilot_not_main_results",
+  "python": "3.12.14",
+  "runs": 100,
+  "annual_rows": 1100,
+  "source_hashes": {
+    "scenario.py": "28d0b819cafc078491c1238c2c6a5e218ba3a6f308d90784d4704f1566358ba7",
+    "simulator.py": "728a27a59f49a68a4d63e224ee6fd588516985f9777b930edc899f96f42cdb34",
+    "analysis.py": "c8d5317d858728a4367dcedceb63c076431e9c0f60099cad8693eb3bc89e8716",
+    "io_utils.py": "187c776637e214f4bb927c16c94975a8db60118eeea9bf8ac775271524f71d87",
+    "research/run_pilot.py": "adf66ecda32601a0f0899b268c4e2c894f009b1b4d5b458885f6173ed30694f8",
+    "data/scenarios.json": "838772b4ca3858ee0b0693e15f064dc3a36a1fe7fe583fc709619c1794a6a530",
+    "reference/model.ts": "ede8feb3ccb1dd26e10bd93d3c8f177269a192216868fef9cd9eb2f3df104c1b"
+  },
+  "configs": [
+    {
+      "run_id": "run_000",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_001",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_002",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_003",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_004",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_005",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_006",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_007",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_008",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_009",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_010",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_011",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_012",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_013",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_014",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_015",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_016",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_017",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_018",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_019",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.0,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_020",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_021",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_022",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_023",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_024",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_025",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_026",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_027",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_028",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_029",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_030",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_031",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_032",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_033",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_034",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_035",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_036",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_037",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_038",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_039",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.21,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_040",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_041",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_042",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_043",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_044",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_045",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_046",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_047",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_048",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_049",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_050",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_051",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_052",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_053",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_054",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_055",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_056",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_057",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_058",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_059",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_060",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_061",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_062",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_063",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_064",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_065",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_066",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_067",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_068",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_069",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_070",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_071",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_072",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_073",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_074",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_075",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_076",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_077",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_078",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_079",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.63,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_080",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_081",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_082",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_083",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.0
+      }
+    },
+    {
+      "run_id": "run_084",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_085",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_086",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_087",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.225
+      }
+    },
+    {
+      "run_id": "run_088",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_089",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_090",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_091",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.45
+      }
+    },
+    {
+      "run_id": "run_092",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_093",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_094",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_095",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.675
+      }
+    },
+    {
+      "run_id": "run_096",
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_097",
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_098",
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.9
+      }
+    },
+    {
+      "run_id": "run_099",
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.84,
+        "tax_adoption_penalty": 0.9
+      }
+    }
+  ]
+}

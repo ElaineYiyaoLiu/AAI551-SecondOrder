@@ -1,0 +1,8 @@
+{
+  "version": "0.1",
+  "status": "draft_after_exploratory_pilot",
+  "pilot": {"demand_grid": [0,0.21,0.42,0.63,0.84], "penalty_grid": [0,0.225,0.45,0.675,0.9], "policies": ["no_policy","ubi_500","tax_20","combined"], "runs": 100},
+  "planned_main": {"demand_points": 41, "penalty_points": 41, "economic_layers": [[25,30,10],[10,60,20],[45,40,20]], "runs": 20172, "primary_metric": "mean employment difference over years 1 through 10", "budget_caps_thousand_usd": [0,30,60]},
+  "pending_freeze": ["literature and contribution review", "analytic conditions", "policy and budget justification", "boundary and invalid-state protocol"],
+  "interpretation": "Deterministic artificial stress tests. No grid shares as real probabilities; no statistical confidence intervals."
+}

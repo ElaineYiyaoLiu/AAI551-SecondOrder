@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "scenarios": [
+    {"name": "no_policy"},
+    {"name": "ubi_500", "ubi": 500},
+    {"name": "tax_20", "tax": 20},
+    {"name": "combined", "ubi": 500, "tax": 20}
+  ]
+}
