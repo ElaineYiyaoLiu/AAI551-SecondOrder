@@ -1,0 +1,61 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx,booktabs,array,longtable}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[unicode,breaklinks,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{placeins}
+\usepackage{xurl}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\parskip}{5pt plus 1pt minus 1pt}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\bibsep}{4pt}
+\renewcommand{\bibfont}{\small}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.75}
+\renewenvironment{abstract}{%
+  \par\small\begin{center}\bfseries\abstractname\end{center}%
+  \begin{list}{}{\setlength{\leftmargin}{0.25in}%
+    \setlength{\rightmargin}{0.25in}\setlength{\listparindent}{0pt}%
+    \setlength{\itemindent}{0pt}\setlength{\parsep}{0pt}%
+    \setlength{\topsep}{0pt}}%
+  \item\relax\ignorespaces
+}{\par\end{list}\normalsize\vspace{0.5\baselineskip}}
+\newtheorem{proposition}{Proposition}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\inputtable}[1]{\csname @@input\endcsname #1 }
+\hypersetup{pdftitle={Demand Feedback in Automation Scenarios},pdfauthor={Elaine (Yiyao) Liu}}
+\title{Demand Feedback in Automation Scenarios}
+\author{Elaine (Yiyao) Liu}
+\date{\today}
+\begin{document}
+\maketitle
+\begin{abstract}
+% Write the abstract after validating the results.
+\end{abstract}
+\noindent\textbf{Keywords:} automation; demand feedback; policy comparison; dynamic models.
+\section{Introduction}
+\section{Related work}
+\section{Model}
+% Define state variables, units, annual update order, and policy inputs.
+\section{Structural analysis}
+% State assumptions precisely; include verified propositions and proofs as needed.
+\section{Experimental design}
+\section{Results}
+\section{Discussion}
+\section{Conclusion}
+% Add only references verified against primary sources.
+% \bibliographystyle{plainnat}
+% \bibliography{references}
+\appendix
+\section{Additional derivations and reproducibility}
+\end{document}
