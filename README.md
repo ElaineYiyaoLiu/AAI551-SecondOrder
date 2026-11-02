@@ -6,9 +6,9 @@ Start with the settings in `data/scenarios.json`. Change how fast AI is adopted,
 
 ## Validation
 
-The initial implementation passes 14 tests, including 715 numerical comparisons with the original TypeScript model. A 100-run exploratory pilot is included in `outputs/pilot/`.
+The implementation passes 28 tests, including 715 numerical comparisons with regenerated TypeScript reference outputs, annual-order checks, boundary diagnostics, JSON validation, and notebook export checks. A 100-run exploratory pilot is included in `outputs/pilot/`.
 
-The notebook’s code cells have been checked sequentially. Full Jupyter kernel execution and installation checks on macOS are still pending. Details are in `docs/validation_report.json`.
+All six notebook code cells run sequentially in an isolated test directory. The saved comparison plot, full CSV table, and configuration sidecar are checked, including reconstruction with nondefault assumptions. A standalone Jupyter kernel could not start in the validation environment because socket operations were denied. Full kernel execution, inline display, and installation checks on macOS remain pending. Details are in `docs/validation_report.json`.
 
 The input scenarios use illustrative assumptions.
 
@@ -41,6 +41,21 @@ python -m research.run_pilot
 
 Running the simulator requires no Node or API key. To regenerate the TypeScript
 reference data, developers use Node 24: `node reference/generate.mjs`.
+
+## Headless checks on Linux
+
+The following setup was tested with Python 3.12.14 on Linux:
+
+```bash
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pip check
+.venv/bin/python -m pytest -q
+```
+
+The notebook workflow test runs in a temporary directory and preserves existing
+outputs. It checks saved plots and exports; standalone kernel execution and
+inline figure rendering require the JupyterLab check described above.
 
 ## Files
 
