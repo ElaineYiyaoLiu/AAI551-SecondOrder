@@ -1,6 +1,6 @@
 {
-  "validated_on": "2026-11-02",
-  "base_commit": "18d743a8fb4edcca3e782cd125abfd7f06ba7d26",
+  "validated_on": "2026-11-05",
+  "base_commit": "7dd47e7f01058f0140f2d06a824cf3fe68ee922a",
   "python": "3.12.14",
   "platform": "Linux",
   "installation": {
@@ -12,7 +12,7 @@
   },
   "pytest": {
     "command": "python -m pytest -q",
-    "passed": 28
+    "passed": 45
   },
   "upstream_parity": {
     "cases": 5,
@@ -20,7 +20,7 @@
     "fields": 13,
     "comparisons": 715,
     "tolerance": "rtol=atol=1e-12",
-    "reference_regeneration": "node v24.22.1 reference/generate.mjs; output identical to pinned reference"
+    "reference_regeneration": "Pinned expected.json checked in current suite; regeneration on 2026-11-02 was identical."
   },
   "model_audit": {
     "reference": "reference/model.ts",
@@ -47,8 +47,8 @@
   },
   "notebook_clean_kernel": {
     "status": "blocked",
-    "attempt": "Installed secondorder kernelspec and executed with nbclient 0.11.0 / ipykernel 7.4.0",
-    "error": "Operation not permitted (src/ip_resolver.cpp:542); Kernel died before replying to kernel_info",
+    "attempt": "nbclient 0.11.0 / ipykernel 7.4.0; TCP and IPC transports attempted on 2026-11-05",
+    "error": "TCP: Operation not permitted in ip_resolver; IPC: ZMQError Operation not permitted binding kernel socket",
     "inline_display": "not verified"
   },
   "pilot": {
@@ -57,8 +57,16 @@
     "annual_rows": 1100
   },
   "windows_macos": "not tested",
-  "research_protocol": "0.1 draft_after_exploratory_pilot; not frozen",
+  "research_protocol": "0.2 draft_after_analytic_checks; not frozen",
   "main_experiments": "not run",
   "paper": "scaffold only",
-  "repository": "https://github.com/ElaineYiyaoLiu/AAI551-SecondOrder"
+  "repository": "https://github.com/ElaineYiyaoLiu/AAI551-SecondOrder",
+  "analytic_response": {
+    "status": "passed",
+    "configurations": 12,
+    "annual_rows": 132,
+    "max_level_error": 4.263256414560601e-14,
+    "max_derivative_error": 2.433830914583268e-12,
+    "evidence": "outputs/analytic_response/validation.json"
+  }
 }

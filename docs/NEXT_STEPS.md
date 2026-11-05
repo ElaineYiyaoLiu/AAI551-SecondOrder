@@ -1,16 +1,20 @@
-# 下一阶段
+# Next steps
 
-已经完成：默认模型 Python 实现、四政策输入、Notebook、功能测试、
-五案例跨语言参考核对、100 次探索性 pilot 及逐年记录。
+1. Complete standalone Jupyter kernel execution and inline figure inspection in an
+   environment supporting kernel sockets. Sequential notebook code and artifact
+   checks pass; local TCP and IPC startup are still blocked.
+2. Specify and review the E2–E5 policy, fiscal, tie, boundary and invalid-state
+   rules before freezing the main experiment protocol. Version 0.2 is a draft.
+3. Use the simplified response derivation as a check for the no-dividend,
+   unclipped case. Restore dividends and grouped clamps in mechanism experiments;
+   retain raw values, clip flags and invalid states.
+4. Run the 192 mechanism configurations and 20172 main-grid configurations only
+   after their required protocol rules are fixed. Perform boundary refinement and
+   fiscal comparisons, then independently recompute summaries and figure inputs.
+5. Write the paper from verified results using paper/template.tex and
+   docs/paper_style.md. The current paper remains a scaffold.
+6. Complete actual Windows/macOS installation checks, personal details and the
+   demonstration video before submission.
 
-1. Elaine 审阅 model_spec.md 中单位、年序、家庭归一化与财政解释。
-2. 审阅固定采用路径、关闭分红、未触发夹断和内部补助分支时的解析响应。
-   先验证一年的就业滞后，再逐步恢复完整机制。
-3. 核查最近文献，确认模型专属结果具有研究价值。策划案的文献尚未在本轮核验。
-4. 冻结政策、三经济层、主指标、预算阈值、异常状态处理与 E2–E5 协议。
-   本轮 pilot 已查看，任何后续选择均记录日期和理由。
-5. 运行 192 次机制实验与 20172 次主网格，再做边界加密和财政比较。
-6. 独立重算汇总表，写入真实结果后完成论文；Windows/macOS 实装检查、
-   个人信息、批准记录、真实提交历史和演示视频在最终提交前补齐。
-
-本轮没有完成主实验、文献创新性确认、经审阅证明或可投稿论文。
+The targeted source review is in docs/literature_notes.md. It does not establish
+novelty or calibrate the model.
