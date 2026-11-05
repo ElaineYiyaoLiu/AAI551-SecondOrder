@@ -1,0 +1,289 @@
+{
+  "status": "passed",
+  "configurations": 12,
+  "annual_rows": 132,
+  "monthly_ubi_increment": 1,
+  "annual_transfer_increment": 0.012,
+  "level_tolerance": {
+    "rtol": 1e-12,
+    "atol": 1e-12
+  },
+  "derivative_tolerance": {
+    "rtol": 1e-09,
+    "atol": 1e-09
+  },
+  "source_hashes": {
+    "scenario.py": "28d0b819cafc078491c1238c2c6a5e218ba3a6f308d90784d4704f1566358ba7",
+    "simulator.py": "728a27a59f49a68a4d63e224ee6fd588516985f9777b930edc899f96f42cdb34",
+    "research/analytic_response.py": "ef0a64ccb9384f0b6259b143d0efd3d83e24df63bd2d67e1346177c234f7f2a6",
+    "research/run_analytic_checks.py": "b53a9e2f0cd462d8a0fad45bb99121d0a7054206f18a92084f09c71274443604",
+    "docs/analytic_response.md": "7e3ecd5e32d3c52841e089a2c8d05ac59421387675a7dd8bd7c5aa792d039ce2",
+    "tests/test_analytic_response.py": "ecaaaa88ffe8b7297a67a47e4fecb7c2e0e276f3b884889008210b9b10c3175d"
+  },
+  "checks": [
+    {
+      "run_id": "analytic_00",
+      "scenario": {
+        "name": "baseline_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10,
+      "max_level_error": 1.4210854715202004e-14,
+      "max_derivative_error": 3.7969627442180354e-14,
+      "out_of_domain": false
+    },
+    {
+      "run_id": "analytic_01",
+      "scenario": {
+        "name": "baseline_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10,
+      "max_level_error": 1.4210854715202004e-14,
+      "max_derivative_error": 3.7969627442180354e-14,
+      "out_of_domain": false
+    },
+    {
+      "run_id": "analytic_02",
+      "scenario": {
+        "name": "baseline_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10,
+      "max_level_error": 2.842170943040401e-14,
+      "max_derivative_error": 2.433830914583268e-12,
+      "out_of_domain": false
+    },
+    {
+      "run_id": "analytic_03",
+      "scenario": {
+        "name": "baseline_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10,
+      "max_level_error": 4.263256414560601e-14,
+      "max_derivative_error": 2.4131807663252403e-12,
+      "out_of_domain": false
+    },
+    {
+      "run_id": "analytic_04",
+      "scenario": {
+        "name": "baseline_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10,
+      "max_level_error": 1.4210854715202004e-14,
+      "max_derivative_error": 3.7969627442180354e-14,
+      "out_of_domain": false
+    },
+    {
+      "run_id": "analytic_05",
+      "scenario": {
+        "name": "baseline_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10,
+      "max_level_error": 1.4210854715202004e-14,
+      "max_derivative_error": 3.7969627442180354e-14,
+      "out_of_domain": false
+    },
+    {
+      "run_id": "analytic_06",
+      "scenario": {
+        "name": "baseline_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10,
+      "max_level_error": 2.1316282072803006e-14,
+      "max_derivative_error": 1.3425927036792018e-12,
+      "out_of_domain": false
+    },
+    {
+      "run_id": "analytic_07",
+      "scenario": {
+        "name": "baseline_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10,
+      "max_level_error": 2.1316282072803006e-14,
+      "max_derivative_error": 1.588507103633674e-12,
+      "out_of_domain": false
+    },
+    {
+      "run_id": "analytic_08",
+      "scenario": {
+        "name": "baseline_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10,
+      "max_level_error": 1.4210854715202004e-14,
+      "max_derivative_error": 3.7969627442180354e-14,
+      "out_of_domain": false
+    },
+    {
+      "run_id": "analytic_09",
+      "scenario": {
+        "name": "baseline_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10,
+      "max_level_error": 1.4210854715202004e-14,
+      "max_derivative_error": 3.7969627442180354e-14,
+      "out_of_domain": false
+    },
+    {
+      "run_id": "analytic_10",
+      "scenario": {
+        "name": "baseline_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10,
+      "max_level_error": 1.4210854715202004e-14,
+      "max_derivative_error": 9.582334925539726e-13,
+      "out_of_domain": false
+    },
+    {
+      "run_id": "analytic_11",
+      "scenario": {
+        "name": "baseline_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10,
+      "max_level_error": 1.4210854715202004e-14,
+      "max_derivative_error": 1.4102052858788738e-12,
+      "out_of_domain": false
+    }
+  ]
+}

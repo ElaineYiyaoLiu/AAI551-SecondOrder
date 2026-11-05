@@ -1,3 +1,3 @@
 # Next steps
 
-The Python model, sample inputs, and pilot runs are ready. Check the yearly update order and the transfer response, then settle the experiment settings before running the larger grids. Finish the macOS checks and record the demo before submission.
+Run the notebook in a fresh Jupyter kernel and check the inline plots. Finish specifying the policy comparisons, tie rule, budget caps, and treatment of invalid states. The transfer check covers the case with no dividends and no clipping. Run the mechanism and grid experiments once the inputs are fixed.

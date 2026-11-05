@@ -26,3 +26,9 @@ from mean outcomes and computes incremental cumulative deficit relative to the
 same-setting no-policy run. Grid shares are design-dependent, not probabilities.
 These are illustrative structural experiments; they do not identify causal effects
 in an observed economy.
+
+
+The independent no-dividend, unclipped transfer-response calculation and its
+branch conditions are derived in [analytic_response.md](analytic_response.md).
+It holds tax and adoption parameters fixed between policies and rejects reachable
+benefits kinks. Its derivatives must not be applied to the full model unchecked.

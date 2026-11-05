@@ -6,7 +6,7 @@ Start with the settings in `data/scenarios.json`. Change how fast AI is adopted,
 
 ## Validation
 
-The implementation passes 28 tests, including 715 numerical comparisons with regenerated TypeScript reference outputs, annual-order checks, boundary diagnostics, JSON validation, and notebook export checks. A 100-run exploratory pilot is included in `outputs/pilot/`.
+The implementation passes 45 tests, including 715 numerical comparisons with regenerated TypeScript reference outputs, annual-order checks, boundary diagnostics, JSON validation, notebook export checks, and independent transfer-response checks. A 100-run exploratory pilot is included in `outputs/pilot/`.
 
 All six notebook code cells run sequentially in an isolated test directory. The saved comparison plot, full CSV table, and configuration sidecar are checked, including reconstruction with nondefault assumptions. A standalone Jupyter kernel could not start in the validation environment because socket operations were denied. Full kernel execution, inline display, and installation checks on macOS remain pending. Details are in `docs/validation_report.json`.
 
@@ -116,4 +116,4 @@ YouTube Unlisted link: pending. The video will include a short introduction and 
 
 ## Experiments
 
-The 100-run pilot is in `outputs/pilot/`. The experiment settings are in `research/protocol.json`.
+The 100-run pilot is in `outputs/pilot/`. The experiment settings are in `research/protocol.json`. The simplified transfer-response derivation and its scope are in `docs/analytic_response.md`; checked background sources are in `docs/literature_notes.md`. Run `python -m research.run_analytic_checks` to rebuild the 12-configuration analytical check and source hashes. This check uses no dividends or grouped clamps. The main protocol remains a draft.
