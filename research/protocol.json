@@ -1,6 +1,6 @@
 {
-  "version": "0.2",
-  "status": "draft_after_analytic_checks",
+  "version": "1.0",
+  "status": "frozen",
   "pilot": {
     "demand_grid": [
       0,
@@ -52,11 +52,7 @@
       60
     ]
   },
-  "pending_freeze": [
-    "policy and budget justification",
-    "boundary and invalid-state protocol",
-    "experiment configuration and reproducibility review"
-  ],
+  "pending_freeze": [],
   "interpretation": "Deterministic artificial stress tests. No grid shares as real probabilities; no statistical confidence intervals.",
   "analytic_review": {
     "checked_on": "2026-11-05",
@@ -65,7 +61,166 @@
     "background_sources": "docs/literature_notes.md",
     "scope": "Fixed tax/adoption parameters, dividends off, grouped clamps off, local benefits branch derivatives.",
     "research_decision": "Continue model-specific robustness study; no novelty claim.",
-    "full_kernel_validation": "Still blocked by environment socket permissions; sequential code and export checks pass."
+    "full_kernel_validation": "Fresh-process in-process Jupyter execution is verified in outputs/notebook_validation/validation.json. Standalone TCP remains restricted by this host."
   },
-  "literature_review_scope": "Two targeted background sources checked; comprehensive novelty review not completed."
+  "literature_review_scope": "Two targeted background sources checked; comprehensive novelty review not completed.",
+  "frozen_at": "2026-11-11T06:25:59.496946+00:00",
+  "base_commit": "481f2e38f29881dac4386ed56e8f83dbf076f8a1",
+  "review": {
+    "scope": "E2 through E5 deterministic design and reporting rules",
+    "evidence": "docs/protocol_review.md",
+    "prior_outputs": "The 100-run pilot and 12 analytic configurations were available before this freeze. E2-E5 outputs were not generated before this freeze.",
+    "amendments": "Keep this version and its hash in each run manifest. Material design changes require a new version with a reason; never overwrite an existing completed experiment directory."
+  },
+  "horizon": {
+    "years": 10,
+    "summary_years": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "retain_year_zero": true
+  },
+  "policies": [
+    {
+      "name": "no_policy",
+      "ubi": 0,
+      "tax": 0
+    },
+    {
+      "name": "ubi_500",
+      "ubi": 500,
+      "tax": 0
+    },
+    {
+      "name": "tax_20",
+      "ubi": 0,
+      "tax": 20
+    },
+    {
+      "name": "combined",
+      "ubi": 500,
+      "tax": 20
+    }
+  ],
+  "economic_layers": [
+    {
+      "name": "central",
+      "substitution": 25,
+      "productivity": 30,
+      "speed": 10
+    },
+    {
+      "name": "productivity_led",
+      "substitution": 10,
+      "productivity": 60,
+      "speed": 20
+    },
+    {
+      "name": "substitution_led",
+      "substitution": 45,
+      "productivity": 40,
+      "speed": 20
+    }
+  ],
+  "e2": {
+    "runs": 192,
+    "demand_strength": 0.42,
+    "switches": {
+      "feedback": [
+        false,
+        true
+      ],
+      "dividend": [
+        false,
+        true
+      ],
+      "clipping": [
+        false,
+        true
+      ],
+      "adoption_suppression": [
+        false,
+        true
+      ]
+    },
+    "penalty_when_on": 0.45,
+    "penalty_when_off": 0.0,
+    "baseline": "no_policy at identical layer and all mechanism switches",
+    "analysis": "Report paired outcomes and on-minus-off mechanism contrasts holding the other three switches, policy and economic layer fixed. These are ablations, not an additive causal decomposition."
+  },
+  "e3": {
+    "runs": 20172,
+    "demand_grid": {
+      "start": 0.0,
+      "stop": 0.84,
+      "points": 41,
+      "endpoint": true
+    },
+    "penalty_grid": {
+      "start": 0.0,
+      "stop": 0.9,
+      "points": 41,
+      "endpoint": true
+    },
+    "feedback": true,
+    "dividend": true,
+    "clipping": true,
+    "baseline": "no_policy at identical economic layer and grid coordinates"
+  },
+  "metrics": {
+    "mean_employment_delta": "Mean candidate minus same-setting no_policy employment in years 1-10, in percentage points. Primary ranking metric.",
+    "mean_income_delta": "Mean candidate minus same-setting no_policy income in years 1-10, in annual thousand USD per model household.",
+    "cumulative_incremental_deficit": "Negative sum of candidate minus same-setting no_policy annual balance in years 1-10, in cumulative thousand USD per model household. Signed: negative means incremental fiscal savings.",
+    "clipping": "Store all three raw quantities and individual clamp flags; report any clipping over years 1-10.",
+    "domain": "Retain every row and flag any out_of_domain year; comparisons inherit domain flags from either paired run."
+  },
+  "ranking": {
+    "absolute_tolerance_pp": 1e-09,
+    "relative_tolerance": 0.0,
+    "direction": "larger mean employment delta is preferred",
+    "ties": "Retain every policy within absolute tolerance of the maximum as co-winners. Never break ties for scientific counts or maps.",
+    "pairwise": "For all six unordered policy pairs, report candidate-minus-reference mean employment; classify win/tie/loss using absolute tolerance.",
+    "grid_share_denominator": "Report actual comparable paired nodes for each layer, grid and pair; count ties separately. Grid shares describe only the specified stress-test design."
+  },
+  "validity": {
+    "nonfinite": "Keep trace and config. Mark the run invalid_numeric if any numeric quantity is nonfinite; numeric summaries and paired rankings involving it are null, and report the count. Do not silently drop failed runs.",
+    "out_of_domain": "Use simulator.out_of_domain for demand, employment and concentration bounds. Retain finite numeric summaries as labeled mechanism diagnostics. Exclude such pairs from in-domain ranking maps and also report the retained flagged diagnostics.",
+    "negative_flows": "Retain and flag negative output, laborIncome, income, consumption, profit, dividend or aiTax; balances may be negative by design. Label these as nonphysical; exclude affected pairs from in-domain ranking maps.",
+    "exceptions": "Record the configuration and exception. Fail stage validation; do not publish the stage as complete."
+  },
+  "e4": {
+    "resolution_points": [
+      21,
+      41,
+      81
+    ],
+    "grid_ranges": "same inclusive demand and penalty intervals as E3",
+    "pairs": "all six unordered policy pairs, within each economic layer",
+    "candidate_edges": "Adjacent horizontal or vertical nodes with a strict sign change beyond tie tolerance, or an endpoint within tie tolerance. Retain exact ties and no-crossing cases.",
+    "refinement": "Bisect each strict sign-change edge in its varying coordinate with all other inputs fixed until bracket width <= 1e-6 or 30 bisections. Stop and label invalid/domain-disconnected if any required point is invalid or out of domain. Keep unresolved brackets. Exact ties are sampled tie points, not proofs of unique roots.",
+    "outputs": "Store both endpoints, metric differences, layer, policy pair, grid resolution, iteration count and termination reason. Compare node classifications at nested shared coordinates and report bracket counts per resolution. Do not claim all boundaries are detected."
+  },
+  "e5": {
+    "budget_caps_thousand_usd": [
+      0,
+      30,
+      60
+    ],
+    "feasibility": "Signed cumulative incremental deficit <= cap + 1e-9. Apply after excluding invalid or out-of-domain pairs; keep infeasible entries labeled. Baseline no_policy has zero incremental deficit.",
+    "rationale": "0, 30 and 60 are illustrative ten-year incremental resource allowances. UBI 500 is 6 annual thousand USD before endogenous offsets, hence 60 over ten years; 30 is the intermediate cap. These are stress-test cutoffs, not calibrated public budgets.",
+    "comparison": "At each E3 node and cap, retain all feasible employment co-winners under the ranking tolerance and show the employment versus incremental-deficit tradeoff. Preserve dominated and infeasible rows in the source data."
+  },
+  "reproducibility": {
+    "manifest": "Protocol bytes SHA256, model and runner source SHA256, input SHA256, complete per-run resolved configs, Python/library versions, output file hashes, run and row counts.",
+    "checks": "Reconstruct run summaries from saved annual traces independently of runner summary code; verify baseline matching, switch coverage, uniqueness and row counts. Rebuild model traces for all E2 configs and selected E3 configurations including grid corners.",
+    "notebook": "Standalone TCP Jupyter validation is recorded separately. Windows/macOS installation is a delivery check and does not gate deterministic Linux research execution."
+  }
 }

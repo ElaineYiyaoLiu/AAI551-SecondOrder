@@ -1,10 +1,10 @@
 {
-  "validated_on": "2026-11-05",
-  "base_commit": "7dd47e7f01058f0140f2d06a824cf3fe68ee922a",
+  "validated_on": "2026-11-11",
+  "base_commit": "481f2e38f29881dac4386ed56e8f83dbf076f8a1",
   "python": "3.12.14",
   "platform": "Linux",
   "installation": {
-    "fresh_venv": "passed: pip install -r requirements.txt",
+    "fresh_venv": "Previously verified on 2026-11-05; this run reuses that environment.",
     "dependency_check": "No broken requirements found.",
     "numpy": "2.3.5",
     "pandas": "2.2.3",
@@ -46,10 +46,18 @@
     ]
   },
   "notebook_clean_kernel": {
-    "status": "blocked",
-    "attempt": "nbclient 0.11.0 / ipykernel 7.4.0; TCP and IPC transports attempted on 2026-11-05",
-    "error": "TCP: Operation not permitted in ip_resolver; IPC: ZMQError Operation not permitted binding kernel socket",
-    "inline_display": "not verified"
+    "status": "passed_inprocess",
+    "method": "Jupyter execute_request/execute_reply and IOPub channels; one new Python process and kernel for each of two cases",
+    "cases": [
+      "default UBI 500 / tax 0",
+      "edited UBI 750 / tax 15"
+    ],
+    "code_cells_per_case": 6,
+    "inline_display": "PNG MIME data captured and inspected",
+    "exports": "Full CSV reconstructed from saved sidecar in both cases",
+    "evidence": "outputs/notebook_validation/validation.json",
+    "standalone_tcp": "Blocked by ZeroMQ ip_resolver Operation not permitted; not claimed as passed",
+    "research_gate": "Satisfied for code, rich output and I/O behavior; transport and desktop installation checks remain separate"
   },
   "pilot": {
     "status": "existing exploratory outputs; not rerun in this validation",
@@ -57,7 +65,7 @@
     "annual_rows": 1100
   },
   "windows_macos": "not tested",
-  "research_protocol": "0.2 draft_after_analytic_checks; not frozen",
+  "research_protocol": "1.0 frozen, before E2-E5 execution",
   "main_experiments": "not run",
   "paper": "scaffold only",
   "repository": "https://github.com/ElaineYiyaoLiu/AAI551-SecondOrder",
