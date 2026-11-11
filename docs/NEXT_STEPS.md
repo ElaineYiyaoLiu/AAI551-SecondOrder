@@ -1,3 +1,3 @@
 # Next steps
 
-Run the notebook in a fresh Jupyter kernel and check the inline plots. Finish specifying the policy comparisons, tie rule, budget caps, and treatment of invalid states. The transfer check covers the case with no dividends and no clipping. Run the mechanism and grid experiments once the inputs are fixed.
+The notebook passed with the default and edited inputs using an in-process Jupyter kernel. Run the 192 mechanism cases, then compare the four policies across all three economic settings. Finish the boundary and budget checks, confirm that the notebook runs on macOS, and record the demo.

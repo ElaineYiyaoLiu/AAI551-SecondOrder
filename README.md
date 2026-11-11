@@ -8,7 +8,7 @@ Start with the settings in `data/scenarios.json`. Change how fast AI is adopted,
 
 The implementation passes 45 tests, including 715 numerical comparisons with regenerated TypeScript reference outputs, annual-order checks, boundary diagnostics, JSON validation, notebook export checks, and independent transfer-response checks. A 100-run exploratory pilot is included in `outputs/pilot/`.
 
-All six notebook code cells run sequentially in an isolated test directory. The saved comparison plot, full CSV table, and configuration sidecar are checked, including reconstruction with nondefault assumptions. A standalone Jupyter kernel could not start in the validation environment because socket operations were denied. Full kernel execution, inline display, and installation checks on macOS remain pending. Details are in `docs/validation_report.json`.
+All six notebook code cells also run through Jupyter messages in two fresh Python processes, using an in-process kernel. Both the default inputs and edited UBI/tax inputs pass; inline PNG displays, saved plots, CSV tables and configuration reconstruction are checked. Evidence is in `outputs/notebook_validation/`. Standalone ZeroMQ transport is restricted on the validation host; macOS installation checks remain pending. These environment checks are tracked separately from model experiments. Details are in `docs/validation_report.json`.
 
 The input scenarios use illustrative assumptions.
 
@@ -54,8 +54,16 @@ python3.12 -m venv .venv
 ```
 
 The notebook workflow test runs in a temporary directory and preserves existing
-outputs. It checks saved plots and exports; standalone kernel execution and
-inline figure rendering require the JupyterLab check described above.
+outputs. To check Jupyter execution, inline figures and edited inputs in fresh
+Python processes, run:
+
+```bash
+python -m research.validate_notebook
+```
+
+This uses in-process Jupyter channels. On a host with ZeroMQ socket support, use
+`python -m research.validate_notebook --transport tcp` for the standalone kernel
+check. macOS interactive installation checks use the steps above.
 
 ## Files
 
@@ -116,4 +124,4 @@ YouTube Unlisted link: pending. The video will include a short introduction and 
 
 ## Experiments
 
-The 100-run pilot is in `outputs/pilot/`. The experiment settings are in `research/protocol.json`. The simplified transfer-response derivation and its scope are in `docs/analytic_response.md`; checked background sources are in `docs/literature_notes.md`. Run `python -m research.run_analytic_checks` to rebuild the 12-configuration analytical check and source hashes. This check uses no dividends or grouped clamps. The main protocol remains a draft.
+The 100-run pilot is in `outputs/pilot/`. The experiment settings are in `research/protocol.json`. The simplified transfer-response derivation and its scope are in `docs/analytic_response.md`; checked background sources are in `docs/literature_notes.md`. Run `python -m research.run_analytic_checks` to rebuild the 12-configuration analytical check and source hashes. This check uses no dividends or grouped clamps. The E2–E5 protocol is frozen at version 1.0, with policy pairing, tie, validity, boundary and fiscal rules in `research/protocol.json` and `docs/protocol_review.md`. Main experiment results are pending.

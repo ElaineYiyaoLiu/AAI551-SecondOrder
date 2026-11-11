@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "code_cells": 6,
+  "execution_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "inline_pngs": 2,
+  "ubi": 500,
+  "tax": 0,
+  "csv_rows": 11,
+  "csv_sidecar_reconstruction": "passed"
+}

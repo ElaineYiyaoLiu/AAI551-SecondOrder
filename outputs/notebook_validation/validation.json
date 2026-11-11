@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "transport": "inprocess",
+  "isolation": "fresh Python child process for each case",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "cases": {
+    "default": {
+      "status": "passed",
+      "code_cells": 6,
+      "execution_counts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "inline_pngs": 2,
+      "ubi": 500,
+      "tax": 0,
+      "csv_rows": 11,
+      "csv_sidecar_reconstruction": "passed"
+    },
+    "edited": {
+      "status": "passed",
+      "code_cells": 6,
+      "execution_counts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "inline_pngs": 2,
+      "ubi": 750,
+      "tax": 15,
+      "csv_rows": 11,
+      "csv_sidecar_reconstruction": "passed"
+    }
+  },
+  "source_hashes": {
+    "main.ipynb": "59ed3a4c080cb0e6f6817c169fd881c0f7634cfdf2d73fd4cf4fb86d13ed78f4",
+    "scenario.py": "28d0b819cafc078491c1238c2c6a5e218ba3a6f308d90784d4704f1566358ba7",
+    "simulator.py": "728a27a59f49a68a4d63e224ee6fd588516985f9777b930edc899f96f42cdb34",
+    "analysis.py": "c8d5317d858728a4367dcedceb63c076431e9c0f60099cad8693eb3bc89e8716",
+    "io_utils.py": "187c776637e214f4bb927c16c94975a8db60118eeea9bf8ac775271524f71d87",
+    "visualization.py": "261a0f315664bddeb62374203bfb9a823f8afc2fcbf3fc80cc1dc2f08c688de2",
+    "data/scenarios.json": "838772b4ca3858ee0b0693e15f064dc3a36a1fe7fe583fc709619c1794a6a530",
+    "research/validate_notebook.py": "5ef036d1570d32c0667d05c3f1cbe9e178695d0bbc5deacc3e2840d08a12da95"
+  },
+  "output_hashes": {
+    "default/executed.ipynb": "cf8779c93df7d031c738680deabce4479cefeb3b6bf40f2679ad91fa17d819ee",
+    "default/inline.png": "9de894a1fa1c17d3b4a75fafcd35a489240053fc7e2bc7370cbfaab49e9d1bbf",
+    "default/policy_comparison.png": "23e50cdfaaea6a77f3798cff683cd7fde30ee899067406044ce6eff435d4e32f",
+    "default/result.json": "d222a3d342421cc6cf9488c0f52306e145b550088d7d15c221f244e44b6dd2d8",
+    "default/ubi_500.config.json": "e007bbf539661272ae6259a326435ab43de42619001c165a31fa5a6e2deb7ca1",
+    "default/ubi_500.csv": "8832e7b4ba3e2c52f8cad6be1529d41c620416cae7e504decbf73bfca670bed6",
+    "edited/executed.ipynb": "4a272fd6f201f43c709baf067e02f7ed3e15911c92eccba5d73e48e0070f481c",
+    "edited/inline.png": "850011f01220a1208745133d2056c2a05dc7cf5c18dba66565de68e4e967dac2",
+    "edited/policy_comparison.png": "5341fd0d647a71ff65ed3c8b10e14f10b9c335dca32cd0d62e32c0bac77a02d9",
+    "edited/result.json": "75ebb359a04a4946b2baeecbd133513c8a54fc4b3ace065f6c5c8e4f643aaffd",
+    "edited/ubi_500.config.json": "88fabe21b02d2813d937ce2018a6173beb8151d00e448c7a80c537e1ef8c7f45",
+    "edited/ubi_500.csv": "438d392a4785a915f4d56b4add624d92015d6a7033db23e3186b8d023ffaa18c"
+  }
+}
