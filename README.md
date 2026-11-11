@@ -6,7 +6,7 @@ The notebook shows annual trajectories, policy comparisons, demand-feedback effe
 
 ## Validation
 
-The implementation passes 45 tests, including 715 numerical comparisons with regenerated TypeScript reference outputs, annual-order checks, boundary diagnostics, JSON validation, notebook export checks, and independent transfer-response checks. A 100-run exploratory pilot is included in `outputs/pilot/`.
+The implementation passes 50 tests, including 715 numerical comparisons with regenerated TypeScript reference outputs, annual-order checks, boundary diagnostics, JSON validation, notebook export checks, and independent transfer-response checks. A 100-run exploratory pilot is included in `outputs/pilot/`.
 
 All six notebook code cells also run through Jupyter messages in two fresh Python processes, using an in-process kernel. Both the default inputs and edited UBI/tax inputs pass; inline PNG displays, saved plots, CSV tables and configuration reconstruction are checked. Evidence is in `outputs/notebook_validation/`. Standalone ZeroMQ transport is restricted on the validation host; Windows/macOS installation checks remain pending. These environment checks are tracked separately from model experiments. Details are in `docs/validation_report.json`.
 
@@ -94,6 +94,9 @@ check. Windows/macOS interactive installation checks use the steps above.
 | tests/test_model.py | Functional and parity tests |
 | reference/ | Attributed upstream TypeScript and generated expectations |
 | research/run_pilot.py | 5 x 5 assumption pairs x 4 policies |
+| research/run_mechanisms.py | Frozen 192-run mechanism experiment |
+| research/verify_mechanisms.py | Independent replay and summary reconstruction |
+| outputs/mechanisms/ | E2 traces, configurations, comparisons and figure |
 | outputs/pilot/ | Annual rows, paired summaries and source hashes |
 | docs/ | Model interpretation, validation and next tasks |
 | paper/main.tex | Incomplete English paper scaffold |
@@ -140,6 +143,6 @@ YouTube Unlisted link: pending. The video will include a short introduction and 
 
 ## Research
 
-The research extension examines how demand feedback and other model assumptions affect policy rankings. The main experiments, analytical verification, and paper are in progress. The experiment plan is in `research/protocol.json`. The simplified transfer-response derivation and its scope are in `docs/analytic_response.md`; checked background sources are in `docs/literature_notes.md`. Run `python -m research.run_analytic_checks` to rebuild the 12-configuration analytical check and source hashes. This check uses no dividends or grouped clamps. The E2–E5 protocol is frozen at version 1.0, with policy pairing, tie, validity, boundary and fiscal rules in `research/protocol.json` and `docs/protocol_review.md`. Main experiment results are pending.
+The research extension examines how demand feedback and other model assumptions affect policy rankings. The E2 mechanism experiment and simplified analytical checks are complete; the policy grids and paper are in progress. The experiment plan is in `research/protocol.json`. The simplified transfer-response derivation and its scope are in `docs/analytic_response.md`; checked background sources are in `docs/literature_notes.md`. Run `python -m research.run_analytic_checks` to rebuild the 12-configuration analytical check and source hashes. This check uses no dividends or grouped clamps. The E2–E5 protocol is frozen at version 1.0, with policy pairing, tie, validity, boundary and fiscal rules in `research/protocol.json` and `docs/protocol_review.md`. E2 includes 192 independently replayed runs, 2,112 annual rows and 384 verified mechanism contrasts in `outputs/mechanisms/`. Results and a conditional comparison figure are in [docs/e2_results.md](docs/e2_results.md). Run `python -m research.verify_mechanisms` to check the saved evidence, or `python -m research.analyze_mechanisms` to rebuild the analysis. The remaining E3–E5 experiments are pending.
 
 

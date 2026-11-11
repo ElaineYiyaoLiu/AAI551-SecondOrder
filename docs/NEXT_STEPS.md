@@ -1,7 +1,7 @@
 # Next steps
 
-1. Run and independently verify the frozen E2 mechanism experiment: 192 runs,
-   complete annual traces and matched on-minus-off contrasts.
+1. E2 is complete and independently verified: 192 runs, 2,112 annual rows and
+   384 matched mechanism contrasts. Results are in docs/e2_results.md.
 2. Run E3 on the inclusive 41 by 41 grids in each of three economic layers,
    using all four policies and retaining paired validity flags.
 3. Complete E4 boundary refinement and resolution checks, then E5 fiscal
