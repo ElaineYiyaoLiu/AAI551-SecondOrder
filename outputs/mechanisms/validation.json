@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "verified_at": "2026-11-11T06:38:20.042036+00:00",
+  "runs_replayed": 192,
+  "annual_rows_verified": 2112,
+  "summaries_reconstructed": 192,
+  "contrasts_reconstructed": 384,
+  "protocol_sha256": "85823c4d84f2f35ceedcd7412f1a9525d1985396b3e11d4c9303d10db860c99b",
+  "manifest_sha256": "1c6536b45e1a2924a7969129e02b6843db7ff4ae18ed311e6f144b15a5384a8a",
+  "source_and_output_hashes": "passed",
+  "untaxed_adoption_suppression_invariance": "passed",
+  "no_feedback_ubi_employment_invariance": "passed",
+  "out_of_domain_runs": 0,
+  "nonphysical_runs": 0,
+  "invalid_numeric_runs": 0,
+  "ranking_eligible_runs": 192
+}

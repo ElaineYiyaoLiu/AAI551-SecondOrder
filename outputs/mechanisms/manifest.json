@@ -1,0 +1,5018 @@
+{
+  "status": "computed_pending_independent_verification",
+  "computed_at": "2026-11-11T06:38:18.945019+00:00",
+  "protocol_version": "1.0",
+  "source_hashes": {
+    "research/protocol.json": "85823c4d84f2f35ceedcd7412f1a9525d1985396b3e11d4c9303d10db860c99b",
+    "research/run_mechanisms.py": "71b96e50a0a42187795f73e839d22e1dda5975f208d5dbb6cc69effcf22a767c",
+    "research/verify_mechanisms.py": "292a9f38007d44f022e9151867ea830a9c711e8ebac3837ae7becf9aa079a633",
+    "scenario.py": "28d0b819cafc078491c1238c2c6a5e218ba3a6f308d90784d4704f1566358ba7",
+    "simulator.py": "728a27a59f49a68a4d63e224ee6fd588516985f9777b930edc899f96f42cdb34"
+  },
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "runs": 192,
+  "annual_rows": 2112,
+  "contrasts": 384,
+  "configs": [
+    {
+      "run_id": "central_0000_no_policy",
+      "pair_id": "central_0000",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0000_ubi_500",
+      "pair_id": "central_0000",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0000_tax_20",
+      "pair_id": "central_0000",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0000_combined",
+      "pair_id": "central_0000",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0001_no_policy",
+      "pair_id": "central_0001",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0001_ubi_500",
+      "pair_id": "central_0001",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0001_tax_20",
+      "pair_id": "central_0001",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0001_combined",
+      "pair_id": "central_0001",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0010_no_policy",
+      "pair_id": "central_0010",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0010_ubi_500",
+      "pair_id": "central_0010",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0010_tax_20",
+      "pair_id": "central_0010",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0010_combined",
+      "pair_id": "central_0010",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0011_no_policy",
+      "pair_id": "central_0011",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0011_ubi_500",
+      "pair_id": "central_0011",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0011_tax_20",
+      "pair_id": "central_0011",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0011_combined",
+      "pair_id": "central_0011",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0100_no_policy",
+      "pair_id": "central_0100",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0100_ubi_500",
+      "pair_id": "central_0100",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0100_tax_20",
+      "pair_id": "central_0100",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0100_combined",
+      "pair_id": "central_0100",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0101_no_policy",
+      "pair_id": "central_0101",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0101_ubi_500",
+      "pair_id": "central_0101",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0101_tax_20",
+      "pair_id": "central_0101",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0101_combined",
+      "pair_id": "central_0101",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0110_no_policy",
+      "pair_id": "central_0110",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0110_ubi_500",
+      "pair_id": "central_0110",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0110_tax_20",
+      "pair_id": "central_0110",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0110_combined",
+      "pair_id": "central_0110",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0111_no_policy",
+      "pair_id": "central_0111",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0111_ubi_500",
+      "pair_id": "central_0111",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0111_tax_20",
+      "pair_id": "central_0111",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_0111_combined",
+      "pair_id": "central_0111",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1000_no_policy",
+      "pair_id": "central_1000",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1000_ubi_500",
+      "pair_id": "central_1000",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1000_tax_20",
+      "pair_id": "central_1000",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1000_combined",
+      "pair_id": "central_1000",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1001_no_policy",
+      "pair_id": "central_1001",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1001_ubi_500",
+      "pair_id": "central_1001",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1001_tax_20",
+      "pair_id": "central_1001",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1001_combined",
+      "pair_id": "central_1001",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1010_no_policy",
+      "pair_id": "central_1010",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1010_ubi_500",
+      "pair_id": "central_1010",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1010_tax_20",
+      "pair_id": "central_1010",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1010_combined",
+      "pair_id": "central_1010",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1011_no_policy",
+      "pair_id": "central_1011",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1011_ubi_500",
+      "pair_id": "central_1011",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1011_tax_20",
+      "pair_id": "central_1011",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1011_combined",
+      "pair_id": "central_1011",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1100_no_policy",
+      "pair_id": "central_1100",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1100_ubi_500",
+      "pair_id": "central_1100",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1100_tax_20",
+      "pair_id": "central_1100",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1100_combined",
+      "pair_id": "central_1100",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1101_no_policy",
+      "pair_id": "central_1101",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1101_ubi_500",
+      "pair_id": "central_1101",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1101_tax_20",
+      "pair_id": "central_1101",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1101_combined",
+      "pair_id": "central_1101",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1110_no_policy",
+      "pair_id": "central_1110",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1110_ubi_500",
+      "pair_id": "central_1110",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1110_tax_20",
+      "pair_id": "central_1110",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1110_combined",
+      "pair_id": "central_1110",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1111_no_policy",
+      "pair_id": "central_1111",
+      "layer": "central",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1111_ubi_500",
+      "pair_id": "central_1111",
+      "layer": "central",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1111_tax_20",
+      "pair_id": "central_1111",
+      "layer": "central",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "central_1111_combined",
+      "pair_id": "central_1111",
+      "layer": "central",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 25,
+        "productivity": 30,
+        "speed": 10,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0000_no_policy",
+      "pair_id": "productivity_led_0000",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0000_ubi_500",
+      "pair_id": "productivity_led_0000",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0000_tax_20",
+      "pair_id": "productivity_led_0000",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0000_combined",
+      "pair_id": "productivity_led_0000",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0001_no_policy",
+      "pair_id": "productivity_led_0001",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0001_ubi_500",
+      "pair_id": "productivity_led_0001",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0001_tax_20",
+      "pair_id": "productivity_led_0001",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0001_combined",
+      "pair_id": "productivity_led_0001",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0010_no_policy",
+      "pair_id": "productivity_led_0010",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0010_ubi_500",
+      "pair_id": "productivity_led_0010",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0010_tax_20",
+      "pair_id": "productivity_led_0010",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0010_combined",
+      "pair_id": "productivity_led_0010",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0011_no_policy",
+      "pair_id": "productivity_led_0011",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0011_ubi_500",
+      "pair_id": "productivity_led_0011",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0011_tax_20",
+      "pair_id": "productivity_led_0011",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0011_combined",
+      "pair_id": "productivity_led_0011",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0100_no_policy",
+      "pair_id": "productivity_led_0100",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0100_ubi_500",
+      "pair_id": "productivity_led_0100",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0100_tax_20",
+      "pair_id": "productivity_led_0100",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0100_combined",
+      "pair_id": "productivity_led_0100",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0101_no_policy",
+      "pair_id": "productivity_led_0101",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0101_ubi_500",
+      "pair_id": "productivity_led_0101",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0101_tax_20",
+      "pair_id": "productivity_led_0101",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0101_combined",
+      "pair_id": "productivity_led_0101",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0110_no_policy",
+      "pair_id": "productivity_led_0110",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0110_ubi_500",
+      "pair_id": "productivity_led_0110",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0110_tax_20",
+      "pair_id": "productivity_led_0110",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0110_combined",
+      "pair_id": "productivity_led_0110",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0111_no_policy",
+      "pair_id": "productivity_led_0111",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0111_ubi_500",
+      "pair_id": "productivity_led_0111",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0111_tax_20",
+      "pair_id": "productivity_led_0111",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_0111_combined",
+      "pair_id": "productivity_led_0111",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1000_no_policy",
+      "pair_id": "productivity_led_1000",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1000_ubi_500",
+      "pair_id": "productivity_led_1000",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1000_tax_20",
+      "pair_id": "productivity_led_1000",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1000_combined",
+      "pair_id": "productivity_led_1000",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1001_no_policy",
+      "pair_id": "productivity_led_1001",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1001_ubi_500",
+      "pair_id": "productivity_led_1001",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1001_tax_20",
+      "pair_id": "productivity_led_1001",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1001_combined",
+      "pair_id": "productivity_led_1001",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1010_no_policy",
+      "pair_id": "productivity_led_1010",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1010_ubi_500",
+      "pair_id": "productivity_led_1010",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1010_tax_20",
+      "pair_id": "productivity_led_1010",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1010_combined",
+      "pair_id": "productivity_led_1010",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1011_no_policy",
+      "pair_id": "productivity_led_1011",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1011_ubi_500",
+      "pair_id": "productivity_led_1011",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1011_tax_20",
+      "pair_id": "productivity_led_1011",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1011_combined",
+      "pair_id": "productivity_led_1011",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1100_no_policy",
+      "pair_id": "productivity_led_1100",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1100_ubi_500",
+      "pair_id": "productivity_led_1100",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1100_tax_20",
+      "pair_id": "productivity_led_1100",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1100_combined",
+      "pair_id": "productivity_led_1100",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1101_no_policy",
+      "pair_id": "productivity_led_1101",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1101_ubi_500",
+      "pair_id": "productivity_led_1101",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1101_tax_20",
+      "pair_id": "productivity_led_1101",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1101_combined",
+      "pair_id": "productivity_led_1101",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1110_no_policy",
+      "pair_id": "productivity_led_1110",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1110_ubi_500",
+      "pair_id": "productivity_led_1110",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1110_tax_20",
+      "pair_id": "productivity_led_1110",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1110_combined",
+      "pair_id": "productivity_led_1110",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1111_no_policy",
+      "pair_id": "productivity_led_1111",
+      "layer": "productivity_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1111_ubi_500",
+      "pair_id": "productivity_led_1111",
+      "layer": "productivity_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1111_tax_20",
+      "pair_id": "productivity_led_1111",
+      "layer": "productivity_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "productivity_led_1111_combined",
+      "pair_id": "productivity_led_1111",
+      "layer": "productivity_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 10,
+        "productivity": 60,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0000_no_policy",
+      "pair_id": "substitution_led_0000",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0000_ubi_500",
+      "pair_id": "substitution_led_0000",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0000_tax_20",
+      "pair_id": "substitution_led_0000",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0000_combined",
+      "pair_id": "substitution_led_0000",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0001_no_policy",
+      "pair_id": "substitution_led_0001",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0001_ubi_500",
+      "pair_id": "substitution_led_0001",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0001_tax_20",
+      "pair_id": "substitution_led_0001",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0001_combined",
+      "pair_id": "substitution_led_0001",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0010_no_policy",
+      "pair_id": "substitution_led_0010",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0010_ubi_500",
+      "pair_id": "substitution_led_0010",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0010_tax_20",
+      "pair_id": "substitution_led_0010",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0010_combined",
+      "pair_id": "substitution_led_0010",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0011_no_policy",
+      "pair_id": "substitution_led_0011",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0011_ubi_500",
+      "pair_id": "substitution_led_0011",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0011_tax_20",
+      "pair_id": "substitution_led_0011",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0011_combined",
+      "pair_id": "substitution_led_0011",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0100_no_policy",
+      "pair_id": "substitution_led_0100",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0100_ubi_500",
+      "pair_id": "substitution_led_0100",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0100_tax_20",
+      "pair_id": "substitution_led_0100",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0100_combined",
+      "pair_id": "substitution_led_0100",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0101_no_policy",
+      "pair_id": "substitution_led_0101",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0101_ubi_500",
+      "pair_id": "substitution_led_0101",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0101_tax_20",
+      "pair_id": "substitution_led_0101",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0101_combined",
+      "pair_id": "substitution_led_0101",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0110_no_policy",
+      "pair_id": "substitution_led_0110",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0110_ubi_500",
+      "pair_id": "substitution_led_0110",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0110_tax_20",
+      "pair_id": "substitution_led_0110",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0110_combined",
+      "pair_id": "substitution_led_0110",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0111_no_policy",
+      "pair_id": "substitution_led_0111",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0111_ubi_500",
+      "pair_id": "substitution_led_0111",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0111_tax_20",
+      "pair_id": "substitution_led_0111",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_0111_combined",
+      "pair_id": "substitution_led_0111",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": false,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": false,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1000_no_policy",
+      "pair_id": "substitution_led_1000",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1000_ubi_500",
+      "pair_id": "substitution_led_1000",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1000_tax_20",
+      "pair_id": "substitution_led_1000",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1000_combined",
+      "pair_id": "substitution_led_1000",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1001_no_policy",
+      "pair_id": "substitution_led_1001",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1001_ubi_500",
+      "pair_id": "substitution_led_1001",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1001_tax_20",
+      "pair_id": "substitution_led_1001",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1001_combined",
+      "pair_id": "substitution_led_1001",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": false,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1010_no_policy",
+      "pair_id": "substitution_led_1010",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1010_ubi_500",
+      "pair_id": "substitution_led_1010",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1010_tax_20",
+      "pair_id": "substitution_led_1010",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1010_combined",
+      "pair_id": "substitution_led_1010",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1011_no_policy",
+      "pair_id": "substitution_led_1011",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1011_ubi_500",
+      "pair_id": "substitution_led_1011",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1011_tax_20",
+      "pair_id": "substitution_led_1011",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1011_combined",
+      "pair_id": "substitution_led_1011",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": false,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": false,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1100_no_policy",
+      "pair_id": "substitution_led_1100",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1100_ubi_500",
+      "pair_id": "substitution_led_1100",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1100_tax_20",
+      "pair_id": "substitution_led_1100",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1100_combined",
+      "pair_id": "substitution_led_1100",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1101_no_policy",
+      "pair_id": "substitution_led_1101",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1101_ubi_500",
+      "pair_id": "substitution_led_1101",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1101_tax_20",
+      "pair_id": "substitution_led_1101",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1101_combined",
+      "pair_id": "substitution_led_1101",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": true,
+      "clipping": false,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": false,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1110_no_policy",
+      "pair_id": "substitution_led_1110",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1110_ubi_500",
+      "pair_id": "substitution_led_1110",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1110_tax_20",
+      "pair_id": "substitution_led_1110",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1110_combined",
+      "pair_id": "substitution_led_1110",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": false,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.0
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1111_no_policy",
+      "pair_id": "substitution_led_1111",
+      "layer": "substitution_led",
+      "policy": "no_policy",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "no_policy",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1111_ubi_500",
+      "pair_id": "substitution_led_1111",
+      "layer": "substitution_led",
+      "policy": "ubi_500",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "ubi_500",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 0
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1111_tax_20",
+      "pair_id": "substitution_led_1111",
+      "layer": "substitution_led",
+      "policy": "tax_20",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "tax_20",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 0,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    },
+    {
+      "run_id": "substitution_led_1111_combined",
+      "pair_id": "substitution_led_1111",
+      "layer": "substitution_led",
+      "policy": "combined",
+      "feedback": true,
+      "dividend": true,
+      "clipping": true,
+      "adoption_suppression": true,
+      "scenario": {
+        "name": "combined",
+        "substitution": 45,
+        "productivity": 40,
+        "speed": 20,
+        "ubi": 500,
+        "tax": 20
+      },
+      "assumptions": {
+        "feedback": true,
+        "dividend": true,
+        "clipping": true,
+        "demand_strength": 0.42,
+        "tax_adoption_penalty": 0.45
+      },
+      "years": 10
+    }
+  ],
+  "output_hashes": {
+    "annual.csv.gz": "317afcfff02130e3808b818edb33422f0240b1c7b5be54b9d4c29fd3f59a7171",
+    "contrasts.csv": "020e843a332b9df6ab5f1b33be61e274dfca812858c4174032a4f98d574d5006",
+    "summary.csv": "887501fecc234e4272180feb8d3c5397293c9db807b43f9781e0068c5d5c31ae"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "validated_on": "2026-11-11",
-  "base_commit": "481f2e38f29881dac4386ed56e8f83dbf076f8a1",
+  "base_commit": "84c74060985a321b0126d8bd2e1d200b752e6492",
   "python": "3.12.14",
   "platform": "Linux",
   "installation": {
@@ -12,7 +12,7 @@
   },
   "pytest": {
     "command": "python -m pytest -q",
-    "passed": 45
+    "passed": 50
   },
   "upstream_parity": {
     "cases": 5,
@@ -65,8 +65,8 @@
     "annual_rows": 1100
   },
   "macos": "not tested",
-  "research_protocol": "1.0 frozen, before E2-E5 execution",
-  "main_experiments": "not run",
+  "research_protocol": "1.0 frozen in commit 84c7406 before E2 execution",
+  "main_experiments": "E2 complete and independently verified; E3-E5 not run",
   "repository": "https://github.com/ElaineYiyaoLiu/AAI551-SecondOrder",
   "analytic_response": {
     "status": "passed",
@@ -75,5 +75,16 @@
     "max_level_error": 4.263256414560601e-14,
     "max_derivative_error": 2.433830914583268e-12,
     "evidence": "outputs/analytic_response/validation.json"
+  },
+  "e2": {
+    "status": "passed",
+    "runs_replayed": 192,
+    "annual_rows": 2112,
+    "contrasts_reconstructed": 384,
+    "invalid_numeric_runs": 0,
+    "out_of_domain_runs": 0,
+    "evidence": "outputs/mechanisms/validation.json",
+    "analysis": "docs/e2_results.md",
+    "figure_inputs": "outputs/mechanisms/figure_inputs.csv"
   }
 }

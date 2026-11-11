@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "rows_in_figure": 36,
+  "protocol_sha256": "85823c4d84f2f35ceedcd7412f1a9525d1985396b3e11d4c9303d10db860c99b",
+  "experiment_manifest_sha256": "1c6536b45e1a2924a7969129e02b6843db7ff4ae18ed311e6f144b15a5384a8a",
+  "analysis_source_sha256": "f74eaea19664061d592f6bc59535a499cb19f0681f0846db42abeca3431e48a9",
+  "matplotlib": "3.10.8",
+  "output_hashes": {
+    "docs/e2_results.md": "72d0b138c788a69c95191d619099daeb7803f17a36f1e4584cffd5ebb708bffd",
+    "outputs/mechanisms/figure_inputs.csv": "a82c8c3b1896e64f7884f109a6d1ce5cc1c115564cd895753b7b33cb3953bff3",
+    "outputs/mechanisms/conditional_contrasts.png": "4b229dadf6bd6bbf48e8b9b00fac6e442f45e390abb4e7b70e0a36cda7983a15"
+  }
+}
