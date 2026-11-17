@@ -1,0 +1,39 @@
+{
+  "status": "computed_pending_independent_verification",
+  "computed_at": "2026-11-17T04:19:59.293419+00:00",
+  "protocol_version": "1.0",
+  "source_hashes": {
+    "research/protocol.json": "31811ec8d1da214c00e3d3ea7a98d47e67ab192f2ecedccada319658cd6aaeee",
+    "scenario.py": "28d0b819cafc078491c1238c2c6a5e218ba3a6f308d90784d4704f1566358ba7",
+    "simulator.py": "728a27a59f49a68a4d63e224ee6fd588516985f9777b930edc899f96f42cdb34",
+    "research/run_policy_grids.py": "58b5d3489bfe47a53c80f745dbd2d5c235a79d8bd6435a06321c61aea039d25c",
+    "research/verify_policy_grids.py": "cede94893bef88c6e0798b28de77711ba2ca58b592cb14024b06f84833bb0e30",
+    "research/analyze_policy_grids.py": "df2118d1a8d23843a6746dfcda3e23a717c452911ab0f7fe2b85b283349982a3"
+  },
+  "base_commit": "a2a3dd995dabe3fb5012e350082e7d7808420a96",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "grid_unique_runs": 78732,
+  "grid_annual_rows": 866052,
+  "refinement_runs": 45884,
+  "refinement_annual_rows": 504724,
+  "e3_runs": 20172,
+  "e3_annual_rows": 221892,
+  "config_evidence": "configs.jsonl.gz and refinement/configs.jsonl.gz contain complete resolved per-run inputs",
+  "nested_reuse": "Shared grid coordinates reuse identical runs; summary.csv records every resolution membership.",
+  "output_hashes": {
+    "configs.jsonl.gz": "ff8d53fef3b5654ee1dd0245ce8d1e4f881a03c882f28d3816577fa61495ec7f",
+    "annual.csv.gz": "8effac4e644d826bde013be567a9730b9be7e0f1d3588b44486d6fe9d6ddc5c7",
+    "pairwise.csv": "79b44c8a826a1578e3718598b9cd5cb3e6d1cd145232c5b2aedbae46635c76d7",
+    "boundaries.csv": "be149b37f48618685b6d6a7fa7996e03877202685c91dfbbd5b82ddd2377cbbf",
+    "rankings.csv": "970352a49ba33d91af0c9c33bfe0b8206373d76e30801847ce7635084e3bcbca",
+    "shared_coordinates.csv": "f270d2faa847e791c3c38b4eb38e094fb1291df62631b9aeefb2d1e898e95e4f",
+    "fiscal.csv": "5bc05c13ccbc0d5d125f97e2df71aea7fd8fc50f78f6182ace4874484dc902b4",
+    "edge_coverage.csv": "f3d6b52582bac568a3388930542069034b749d7f659a1e14974f216e074edcdc",
+    "summary.csv": "0a4034f3615bfc886251b2d44c02f79fc37ae1dd699e2046cde04962d07123be",
+    "refinement/configs.jsonl.gz": "60390fda6ce108e23a52966227a324e7c2153b3919ec967c3ae1cb0f49989680",
+    "refinement/annual.csv.gz": "69735ec7863988c1e0a8720a7714248a701ffacff2301795d1236b17c498ab10"
+  }
+}

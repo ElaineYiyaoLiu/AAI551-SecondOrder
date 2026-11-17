@@ -1,20 +1,11 @@
 # Next steps
 
-1. E2 is complete and independently verified: 192 runs, 2,112 annual rows and
-   384 matched mechanism contrasts. Results are in docs/e2_results.md.
-2. Run E3 on the inclusive 41 by 41 grids in each of three economic layers,
-   using all four policies and retaining paired validity flags.
-3. Complete E4 boundary refinement and resolution checks, then E5 fiscal
-   comparisons under the version 1.0 protocol. Independently rebuild summaries
-   and figure inputs before interpreting results.
-4. Write the paper from verified results using paper/template.tex and
-   docs/paper_style.md. The current paper remains a scaffold.
-5. Complete actual Windows/macOS installation checks, standalone ZeroMQ kernel
-   execution, personal details and the demonstration video before submission.
+E0 reference checks, E1 simplified analytical checks, E2 mechanisms and E3-E5 policy grids, boundary refinement and fiscal comparisons are complete. Research protocol 1.0 and the original model are unchanged. Evidence and figures are in docs/e3_e5_results.md and outputs/policy_grids/validation.json. The 54 functional tests pass.
 
-Fresh-process in-process Jupyter execution, inline figures, default and edited
-JSON inputs, and CSV/sidecar reconstruction have passed. The remaining transport
-and desktop checks do not block deterministic research scripts.
+1. Independently review the main claims and figure inputs for the November 19 reproducibility milestone. Numerical reconstruction of E3-E5 is already complete; avoid repeating completed simulations without a reason.
+2. Complete actual Windows/macOS installation and standalone TCP Jupyter checks where those environments are available. Earlier in-process execution remains verified; desktop acceptance is pending.
+3. Write the November 24 paper draft using paper/template.tex and docs/paper_style.md. Use verified E1-E5 evidence, review the mathematical claims and literature, then compile and inspect the complete manuscript. The current paper is still a scaffold.
+4. Review the paper on November 25 and revise before the internal November 29 target.
+5. Rehearse docs/video_script.md, record the 3-4 minute live demonstration, upload the video as Unlisted, and add its real link plus personal email and Stevens ID to README before submission. The official deadline is December 16.
 
-The frozen design is in research/protocol.json and docs/protocol_review.md.
-Background sources and the analytical derivation retain their stated scope.
+After a fresh checkout run `python -m research.restore_grid_evidence` before the full research verifier or figure builder. The restore command uses only included, hash-checked parts; no external dataset or credentials are needed. Existing completed experiments are never overwritten. The notebook uses the small original policy inputs and does not run the large research grids.

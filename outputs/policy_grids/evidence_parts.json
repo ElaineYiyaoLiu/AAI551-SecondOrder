@@ -1,0 +1,124 @@
+{
+  "annual.csv.gz": {
+    "bytes": 52165856,
+    "sha256": "8effac4e644d826bde013be567a9730b9be7e0f1d3588b44486d6fe9d6ddc5c7",
+    "parts": [
+      {
+        "path": "evidence_parts/annual.csv.gz/000.part",
+        "sha256": "49ee719218a470925508269d51503c9784ea9698f25715cb249d7fa96f8bd470"
+      },
+      {
+        "path": "evidence_parts/annual.csv.gz/001.part",
+        "sha256": "baf9d682e3d13d3a673f8f0c19564019636ee4c4d1d4dce9d0a411180e512a78"
+      },
+      {
+        "path": "evidence_parts/annual.csv.gz/002.part",
+        "sha256": "68c61e35068cdc1522aa387c47fa7e6ecd13d91520a7d834554f88715dade0f4"
+      },
+      {
+        "path": "evidence_parts/annual.csv.gz/003.part",
+        "sha256": "46cb998e8219fdc9fd21d9339be848b75b0474823f5c22067f5e6807b95f88a4"
+      },
+      {
+        "path": "evidence_parts/annual.csv.gz/004.part",
+        "sha256": "65d424a3b3fb80d261b5663eb3f24ec2f3667cb039be2a0c49e324b5c5f9fe16"
+      },
+      {
+        "path": "evidence_parts/annual.csv.gz/005.part",
+        "sha256": "85e24d455d956406c1a2a04b5e75743cec004952713a971e1ddba94adb8427cb"
+      },
+      {
+        "path": "evidence_parts/annual.csv.gz/006.part",
+        "sha256": "40d54f5da7ec176f8f5f391030e6c4eaecc32f9858985154d0a65c5ca4162cf6"
+      },
+      {
+        "path": "evidence_parts/annual.csv.gz/007.part",
+        "sha256": "6fa042785f836f5d0d72f2ad3adfe083737c6d655d00e3d83f04c6d5fb69cb0d"
+      },
+      {
+        "path": "evidence_parts/annual.csv.gz/008.part",
+        "sha256": "2d4e27f277d0f5f8cf9780e9a80658de25ced3615df69934ab41e2f5feec0226"
+      }
+    ]
+  },
+  "fiscal.csv": {
+    "bytes": 7057716,
+    "sha256": "5bc05c13ccbc0d5d125f97e2df71aea7fd8fc50f78f6182ace4874484dc902b4",
+    "parts": [
+      {
+        "path": "evidence_parts/fiscal.csv/000.part",
+        "sha256": "cda3b50a6c367520b2b531153b6c4b7140ecc0e80aa8f5b32b4dc1dde2b3609d"
+      },
+      {
+        "path": "evidence_parts/fiscal.csv/001.part",
+        "sha256": "07f0441b45be92cb114e804f42023bf906f54599dbb3f172926c4764a0eb2b6f"
+      }
+    ]
+  },
+  "pairwise.csv": {
+    "bytes": 10391199,
+    "sha256": "79b44c8a826a1578e3718598b9cd5cb3e6d1cd145232c5b2aedbae46635c76d7",
+    "parts": [
+      {
+        "path": "evidence_parts/pairwise.csv/000.part",
+        "sha256": "9e36815fd04a190e761e3ae839ccab5d095bb04a0dd658e6bc4ce897d123f858"
+      },
+      {
+        "path": "evidence_parts/pairwise.csv/001.part",
+        "sha256": "c4c8775e3336fc5bc3f8ffaad82b9e20e08ce2fd8d557276a9f6add86f5a7e5b"
+      }
+    ]
+  },
+  "refinement/annual.csv.gz": {
+    "bytes": 35113242,
+    "sha256": "69735ec7863988c1e0a8720a7714248a701ffacff2301795d1236b17c498ab10",
+    "parts": [
+      {
+        "path": "evidence_parts/refinement__annual.csv.gz/000.part",
+        "sha256": "f92b67a479857517d82c26fa6b9d87eb9bce6156185cf22254ceebcc52b6a1ee"
+      },
+      {
+        "path": "evidence_parts/refinement__annual.csv.gz/001.part",
+        "sha256": "55b41c38e9258bd932b06db314c1fd38a4f5aab25f576484047cd4e9dbb59d2a"
+      },
+      {
+        "path": "evidence_parts/refinement__annual.csv.gz/002.part",
+        "sha256": "60fa1730262d0cc3ac984d072ede70a560f3fc8d358a69f43f1982a05bab90b2"
+      },
+      {
+        "path": "evidence_parts/refinement__annual.csv.gz/003.part",
+        "sha256": "b4b4306d6a470d4bac82330f123c49553f06c2bca2db35902882888afcf23e64"
+      },
+      {
+        "path": "evidence_parts/refinement__annual.csv.gz/004.part",
+        "sha256": "227159e69df3b1dd571df595bf9f526cddf519e36c6fddf3c3603f291f6c4df4"
+      },
+      {
+        "path": "evidence_parts/refinement__annual.csv.gz/005.part",
+        "sha256": "f855ba2953544b25062e19c23ae7fe5f916c3a2befdf4a3cff7920f21180e728"
+      }
+    ]
+  },
+  "summary.csv": {
+    "bytes": 19430967,
+    "sha256": "0a4034f3615bfc886251b2d44c02f79fc37ae1dd699e2046cde04962d07123be",
+    "parts": [
+      {
+        "path": "evidence_parts/summary.csv/000.part",
+        "sha256": "75d25e23f1e6896200b89593e9edd23f5f978874cea1abed362a6cbcef72d268"
+      },
+      {
+        "path": "evidence_parts/summary.csv/001.part",
+        "sha256": "e836b7528e98476104f764443632eb843fd4404df933d4f32e9559bfcdb5b69b"
+      },
+      {
+        "path": "evidence_parts/summary.csv/002.part",
+        "sha256": "fee22f1be57235df322e4202166a0ae156690ac185bf83d293f23f7cf30c354d"
+      },
+      {
+        "path": "evidence_parts/summary.csv/003.part",
+        "sha256": "dc5792d25a41e3e3a6ef559602539ed23a35e5803059bac1e3a1d50142bd43e1"
+      }
+    ]
+  }
+}
