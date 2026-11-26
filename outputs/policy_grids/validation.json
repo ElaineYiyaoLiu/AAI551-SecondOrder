@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "verified_at": "2026-11-17T04:24:10.798403+00:00",
+  "source_and_output_hashes": "passed",
+  "protocol_sha256": "85823c4d84f2f35ceedcd7412f1a9525d1985396b3e11d4c9303d10db860c99b",
+  "manifest_sha256": "bae8bd66a7468e207610074b5a853a375ea4236cf416f0eca912dca9d8a3fb9c",
+  "grid_unique_runs": 78732,
+  "grid_summaries_reconstructed": 104196,
+  "annual_rows_reconstructed": 1370776,
+  "e3_runs": 20172,
+  "e3_annual_rows": 221892,
+  "grid_model_replays": 832,
+  "boundary_endpoint_model_replays": 6030,
+  "pairwise_rows_verified": 156294,
+  "fiscal_rows_verified": 60516,
+  "candidate_edges_verified": 3213,
+  "shared_coordinates_verified": 7689,
+  "e3_invalid_numeric_runs": 0,
+  "e3_out_of_domain_runs": 0,
+  "e3_nonphysical_runs": 0,
+  "e3_clipped_runs": 1444,
+  "unresolved_brackets": 0
+}

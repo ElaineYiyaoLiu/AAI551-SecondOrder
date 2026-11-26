@@ -1,10 +1,10 @@
 {
-  "validated_on": "2026-11-11",
-  "base_commit": "84c74060985a321b0126d8bd2e1d200b752e6492",
+  "validated_on": "2026-11-16",
+  "base_commit": "a2a3dd995dabe3fb5012e350082e7d7808420a96",
   "python": "3.12.14",
   "platform": "Linux",
   "installation": {
-    "fresh_venv": "Previously verified on 2026-11-05; this run reuses that environment.",
+    "fresh_venv": "Prior Linux environment check retained. E3-E5 used the supplied Python 3.12.14 runtime with pinned NumPy/Pandas/Matplotlib; test/kernel dependencies installed to a workspace target. No new macOS installation claim.",
     "dependency_check": "No broken requirements found.",
     "numpy": "2.3.5",
     "pandas": "2.2.3",
@@ -12,7 +12,7 @@
   },
   "pytest": {
     "command": "python -m pytest -q",
-    "passed": 50
+    "passed": 54
   },
   "upstream_parity": {
     "cases": 5,
@@ -66,7 +66,7 @@
   },
   "macos": "not tested",
   "research_protocol": "1.0 frozen in commit 84c7406 before E2 execution",
-  "main_experiments": "E2 complete and independently verified; E3-E5 not run",
+  "main_experiments": "E2 and E3-E5 complete and independently verified",
   "repository": "https://github.com/ElaineYiyaoLiu/AAI551-SecondOrder",
   "analytic_response": {
     "status": "passed",
@@ -86,5 +86,42 @@
     "evidence": "outputs/mechanisms/validation.json",
     "analysis": "docs/e2_results.md",
     "figure_inputs": "outputs/mechanisms/figure_inputs.csv"
-  }
+  },
+  "validation_base_commit": "a2a3dd995dabe3fb5012e350082e7d7808420a96",
+  "e3_e5": {
+    "status": "passed",
+    "verified_at": "2026-11-17T04:24:10.798403+00:00",
+    "source_and_output_hashes": "passed",
+    "protocol_sha256": "85823c4d84f2f35ceedcd7412f1a9525d1985396b3e11d4c9303d10db860c99b",
+    "manifest_sha256": "bae8bd66a7468e207610074b5a853a375ea4236cf416f0eca912dca9d8a3fb9c",
+    "grid_unique_runs": 78732,
+    "grid_summaries_reconstructed": 104196,
+    "annual_rows_reconstructed": 1370776,
+    "e3_runs": 20172,
+    "e3_annual_rows": 221892,
+    "grid_model_replays": 832,
+    "boundary_endpoint_model_replays": 6030,
+    "pairwise_rows_verified": 156294,
+    "fiscal_rows_verified": 60516,
+    "candidate_edges_verified": 3213,
+    "shared_coordinates_verified": 7689,
+    "e3_invalid_numeric_runs": 0,
+    "e3_out_of_domain_runs": 0,
+    "e3_nonphysical_runs": 0,
+    "e3_clipped_runs": 1444,
+    "unresolved_brackets": 0
+  },
+  "evidence_restoration": {
+    "status": "passed",
+    "fresh_directory_restored_files": [
+      "annual.csv.gz",
+      "fiscal.csv",
+      "pairwise.csv",
+      "refinement/annual.csv.gz",
+      "summary.csv"
+    ],
+    "bytes": 124158980,
+    "recipe_sha256": "e12444e404d78b750f82d230d29819d75d56249bae8cddc7ef667153f2f3e77c"
+  },
+  "notebook_validation_note": "Earlier fresh-process Jupyter evidence retained; current notebook edit changes only the research-status markdown."
 }

@@ -3,3 +3,12 @@ __pycache__/
 .pytest_cache/
 .ipynb_checkpoints/
 pytest-of-root/
+
+# Reassembled research evidence; exact repository parts are retained.
+/outputs/policy_grids/annual.csv.gz
+/outputs/policy_grids/fiscal.csv
+/outputs/policy_grids/pairwise.csv
+/outputs/policy_grids/refinement/annual.csv.gz
+/outputs/policy_grids/summary.csv
+
+pytest-of-*/

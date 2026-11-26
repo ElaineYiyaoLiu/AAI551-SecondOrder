@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "fresh_directory_restored_files": [
+    "annual.csv.gz",
+    "fiscal.csv",
+    "pairwise.csv",
+    "refinement/annual.csv.gz",
+    "summary.csv"
+  ],
+  "bytes": 124158980,
+  "recipe_sha256": "e12444e404d78b750f82d230d29819d75d56249bae8cddc7ef667153f2f3e77c"
+}

@@ -6,7 +6,7 @@ Start with the settings in `data/scenarios.json`. Change how fast AI is adopted,
 
 ## Validation
 
-The implementation passes 50 tests, including 715 numerical comparisons with regenerated TypeScript reference outputs, annual-order checks, boundary diagnostics, JSON validation, notebook export checks, and independent transfer-response checks. A 100-run exploratory pilot is included in `outputs/pilot/`.
+The implementation passes 54 tests, including 715 numerical comparisons with regenerated TypeScript reference outputs, annual-order checks, boundary diagnostics, JSON validation, notebook export checks, and independent transfer-response checks. A 100-run exploratory pilot is included in `outputs/pilot/`.
 
 All six notebook code cells also run through Jupyter messages in two fresh Python processes, using an in-process kernel. Both the default inputs and edited UBI/tax inputs pass; inline PNG displays, saved plots, CSV tables and configuration reconstruction are checked. Evidence is in `outputs/notebook_validation/`. Standalone ZeroMQ transport is restricted on the validation host; macOS installation checks remain pending. These environment checks are tracked separately from model experiments. Details are in `docs/validation_report.json`.
 
@@ -83,6 +83,10 @@ check. macOS interactive installation checks use the steps above.
 | research/verify_mechanisms.py | Independent replay and summary reconstruction |
 | outputs/mechanisms/ | E2 traces, configurations, comparisons and figure |
 | outputs/pilot/ | Annual rows, paired summaries and source hashes |
+| research/run_policy_grids.py | Frozen E3-E5 grids, boundary refinement and fiscal comparison |
+| research/verify_policy_grids.py | Independent annual-trace, ranking, boundary and budget audit |
+| research/restore_grid_evidence.py | Hash-checked restoration of large evidence files |
+| outputs/policy_grids/ | Complete E3-E5 evidence, validation, count tables and figures |
 | docs/ | Model interpretation, validation and next tasks |
 
 ## Course requirement mapping
@@ -127,4 +131,20 @@ YouTube Unlisted link: pending. The video will include a short introduction and 
 
 ## Experiments
 
-The mechanism runs and the transfer-response checks are complete. The policy grids come next. The experiment plan is in `research/protocol.json`. The simplified transfer-response derivation and its scope are in `docs/analytic_response.md`; checked background sources are in `docs/literature_notes.md`. Run `python -m research.run_analytic_checks` to rebuild the 12-configuration analytical check and source hashes. This check uses no dividends or grouped clamps. The E2–E5 protocol is frozen at version 1.0, with policy pairing, tie, validity, boundary and fiscal rules in `research/protocol.json` and `docs/protocol_review.md`. E2 includes 192 independently replayed runs, 2,112 annual rows and 384 verified mechanism contrasts in `outputs/mechanisms/`. Results and a conditional comparison figure are in [docs/e2_results.md](docs/e2_results.md). Run `python -m research.verify_mechanisms` to check the saved evidence, or `python -m research.analyze_mechanisms` to rebuild the analysis. The remaining E3–E5 experiments are pending.
+The experiments cover model checks, demand feedback, policy rankings, boundaries, and budget caps. The frozen design is in `research/protocol.json`; the analytical derivation and its assumptions are in `docs/analytic_response.md`.
+
+E2 includes 192 independently replayed runs, 2,112 annual rows and 384 mechanism contrasts. Results are in [docs/e2_results.md](docs/e2_results.md). Run `python -m research.verify_mechanisms` to check those saved results.
+
+E3 includes 20,172 runs on the 41 by 41 grids. E4 checks nested 21, 41 and 81 grids and refines all 3,213 candidate edges; E5 retains all 60,516 budget-policy comparisons. Independent verification reconstructs 1,370,776 annual records across grid and refinement runs, checks every grid summary and comparison, and replays 832 selected grid paths and 6,030 distinct boundary endpoint paths. No bracket is unresolved. Results and three figures are in [docs/e3_e5_results.md](docs/e3_e5_results.md).
+
+After a fresh checkout, restore the large evidence files from the included parts before auditing or rebuilding research figures. This uses only repository files and verifies their hashes:
+
+```bash
+python -m research.restore_grid_evidence
+python -m research.verify_policy_grids
+python -m research.analyze_policy_grids
+```
+
+These research audits are separate from the short notebook demonstration and can take several minutes. Restoration needs about 125 MB of additional disk space. To recompute the experiments, move or preserve `outputs/policy_grids/` and then run `python -m research.run_policy_grids`, followed by verification and analysis. Completed result directories are protected from overwriting. Source hashes, complete resolved configurations, annual traces, pairwise signs and ties, boundary endpoints, fiscal outcomes and validation evidence are retained.
+
+The remaining course work is the macOS check, contact details, and the video. See [docs/NEXT_STEPS.md](docs/NEXT_STEPS.md).
