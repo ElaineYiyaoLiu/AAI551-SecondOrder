@@ -90,8 +90,10 @@ def validate_case(destination, edited=False, transport="inprocess"):
                 cell.outputs = []
                 cell.execution_count = None
         if transport == 'tcp':
-            NotebookClient(notebook, timeout=120, km=manager,
-                resources={'metadata': {'path': str(project)}}).execute()
+            # Close the externally supplied manager before deleting its working directory.
+            client = NotebookClient(notebook, timeout=120, km=manager,
+                resources={'metadata': {'path': str(project)}})
+            client.execute(cleanup_kc=True)
         else:
             with chdir(project):
                 execute_inprocess(notebook)
