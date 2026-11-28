@@ -18,7 +18,7 @@ permissions:
 
 jobs:
   notebook:
-    name: Python 3.12 on macOS
+    name: Python 3.13 on macOS
     runs-on: macos-latest
     timeout-minutes: 12
     steps:
@@ -27,13 +27,13 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-python@v6
         with:
-          python-version: '3.12'
+          python-version: '3.13'
       - name: Install, test, and execute the notebook
         shell: bash
         run: |
           python -m venv .venv
           .venv/bin/python -m pip install -r requirements.txt
           .venv/bin/python -m pip check
-          .venv/bin/python -m ipykernel install --prefix .venv --name secondorder --display-name "Python 3.12 SecondOrder"
+          .venv/bin/python -m ipykernel install --prefix .venv --name secondorder --display-name "Python 3.13 SecondOrder"
           .venv/bin/python -m pytest -q
           .venv/bin/python -m research.validate_notebook --transport tcp

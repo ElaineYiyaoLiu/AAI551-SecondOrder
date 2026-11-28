@@ -6,21 +6,21 @@ Start with the settings in `data/scenarios.json`. Change how fast AI is adopted,
 
 ## Setup on macOS
 
-1. Install [Python 3.12](https://www.python.org/downloads/).
+1. Install [Python 3.13](https://www.python.org/downloads/).
 2. On GitHub, select **Code → Download ZIP** and extract it. In Terminal, type `cd `, drag in the extracted directory containing `README.md` and `main.ipynb`, and press Enter.
 3. Run these commands from that directory.
 
 ```bash
-python3.12 -m venv .venv
+python3.13 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python -m ipykernel install --prefix .venv --name secondorder --display-name "Python 3.12 SecondOrder"
+.venv/bin/python -m ipykernel install --prefix .venv --name secondorder --display-name "Python 3.13 SecondOrder"
 .venv/bin/python -m pytest -q
 .venv/bin/python -m jupyterlab main.ipynb
 ```
 
 ## Run the notebook
 
-1. In JupyterLab, select the **Python 3.12 SecondOrder** kernel. Choose **Kernel → Restart Kernel and Run All Cells**.
+1. In JupyterLab, select the **Python 3.13 SecondOrder** kernel. Choose **Kernel → Restart Kernel and Run All Cells**.
 2. Inspect the annual table, four-policy plot, paired comparison, and sensitivity sweep. The final cell prints `CSV round trip verified: 11 annual rows`.
 3. In the file browser, open `outputs/policy_comparison.png`, `outputs/ubi_500.csv`, and `outputs/ubi_500.config.json`. The CSV includes year zero and ten simulated years. The JSON records the scenario, assumptions, and horizon.
 4. To try a different input, open `data/scenarios.json` in VS Code. In the `ubi_500` entry, change `ubi` from 500 to 750 and save. Keep the scenario name. Restart and run all cells again, inspect the plot and configuration file, then restore the input to 500.
@@ -42,7 +42,7 @@ Dependencies are listed in [requirements.txt](requirements.txt). NumPy supplies 
 
 ## Validation
 
-The 54 tests check the yearly update order, boundary cases, invalid inputs, and CSV exports. They also compare 715 values with the TypeScript model. On macOS, the notebook ran from a fresh Jupyter kernel with the default inputs and a second set of inputs. See the [cross-platform acceptance runs](https://github.com/ElaineYiyaoLiu/AAI551-SecondOrder/actions/workflows/course-acceptance.yml) and [validation report](docs/validation_report.json).
+The 54 tests check the yearly update order, boundary cases, invalid inputs, and CSV exports. They also compare 715 values with the TypeScript model. On macOS, the notebook ran from a fresh Jupyter kernel with the default inputs and a second set of inputs. See the [macOS acceptance runs](https://github.com/ElaineYiyaoLiu/AAI551-SecondOrder/actions/workflows/course-acceptance.yml) and [validation report](docs/validation_report.json).
 
 Run the same standalone check from the project directory with the virtual environment’s interpreter.
 
