@@ -86,7 +86,7 @@ Elaine Liu developed the original model and its Python version, including the no
 
 ## Project Video
 
-YouTube Unlisted link pending.
+[Watch the project video on YouTube](https://youtu.be/E__5ooSOruw)
 
 ## Experiments
 
