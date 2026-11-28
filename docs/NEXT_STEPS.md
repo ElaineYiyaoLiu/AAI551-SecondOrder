@@ -1,3 +1,7 @@
-# Next steps
+# Final course submission
 
-The mechanism, grid, boundary, and budget runs have been checked. The larger files can be restored from the parts in the repository by running `python -m research.restore_grid_evidence`. Finish the macOS checks, add contact details to the README, and record the 3–4 minute demo.
+The notebook and all 54 tests passed on macOS. See the [runs](https://github.com/ElaineYiyaoLiu/AAI551-SecondOrder/actions/workflows/course-acceptance.yml) for the setup and kernel checks.
+
+1. Record the 3–4 minute pitch and live demo.
+2. Upload the video to YouTube as Unlisted. Open the link while signed out, then add it to the [README](../README.md).
+3. Submit the public GitHub repository URL to Canvas by December 16.

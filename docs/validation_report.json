@@ -56,7 +56,7 @@
     "inline_display": "PNG MIME data captured and inspected",
     "exports": "Full CSV reconstructed from saved sidecar in both cases",
     "evidence": "outputs/notebook_validation/validation.json",
-    "standalone_tcp": "Blocked by ZeroMQ ip_resolver Operation not permitted; not claimed as passed",
+    "standalone_tcp": "Passed on macOS hosted runners. The earlier Linux validation host restricts ZeroMQ.",
     "research_gate": "Satisfied for code, rich output and I/O behavior; transport and desktop installation checks remain separate"
   },
   "pilot": {
@@ -64,7 +64,7 @@
     "runs": 100,
     "annual_rows": 1100
   },
-  "macos": "not tested",
+  "macos": "Passed for clean setup and standalone kernels on hosted runners. See delivery_acceptance.",
   "research_protocol": "1.0 frozen in commit 84c7406 before E2 execution",
   "main_experiments": "E2 and E3-E5 complete and independently verified",
   "repository": "https://github.com/ElaineYiyaoLiu/AAI551-SecondOrder",
@@ -123,5 +123,17 @@
     "bytes": 124158980,
     "recipe_sha256": "e12444e404d78b750f82d230d29819d75d56249bae8cddc7ef667153f2f3e77c"
   },
-  "notebook_validation_note": "Earlier fresh-process Jupyter evidence retained; current notebook edit changes only the research-status markdown."
+  "notebook_validation_note": "Earlier fresh-process Jupyter evidence retained; current notebook edit changes only the research-status markdown.",
+  "delivery_acceptance": {
+    "date": "2026-11-26",
+    "linux_python": "3.12.14",
+    "linux_clean_environment": "Dependencies installed from requirements.txt, pip check clean, 54 tests passed. Both cases passed through in-process Jupyter with six code cells and verified figure and CSV configuration exports.",
+    "hosted_macos": {
+
+      "workflow_url": "https://github.com/ElaineYiyaoLiu/AAI551-SecondOrder/actions/workflows/course-acceptance.yml",
+
+      "macos": "passed",
+      "checks": "Fresh Python 3.12 environment, pip check, kernel registration, 54 tests, and default and edited inputs in separate standalone TCP kernels."
+    }
+  }
 }

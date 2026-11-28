@@ -4,147 +4,99 @@ What happens to employment and household spending as firms adopt AI? This Python
 
 Start with the settings in `data/scenarios.json`. Change how fast AI is adopted, how much work it replaces, or how much productivity it adds. The notebook plots the results and saves the annual values and run settings.
 
-## Validation
-
-The implementation passes 54 tests, including 715 numerical comparisons with regenerated TypeScript reference outputs, annual-order checks, boundary diagnostics, JSON validation, notebook export checks, and independent transfer-response checks. A 100-run exploratory pilot is included in `outputs/pilot/`.
-
-All six notebook code cells also run through Jupyter messages in two fresh Python processes, using an in-process kernel. Both the default inputs and edited UBI/tax inputs pass; inline PNG displays, saved plots, CSV tables and configuration reconstruction are checked. Evidence is in `outputs/notebook_validation/`. Standalone ZeroMQ transport is restricted on the validation host; macOS installation checks remain pending. These environment checks are tracked separately from model experiments. Details are in `docs/validation_report.json`.
-
-The input scenarios use illustrative assumptions.
-
 ## Setup on macOS
 
-Install Python 3.12 from python.org. Download and extract the repository ZIP.
-Open Terminal, type `cd `, drag the extracted project folder into the terminal,
-press Enter, and run:
+1. Install [Python 3.12](https://www.python.org/downloads/).
+2. On GitHub, select **Code → Download ZIP** and extract it. In Terminal, type `cd `, drag in the extracted directory containing `README.md` and `main.ipynb`, and press Enter.
+3. Run these commands from that directory.
 
 ```bash
 python3.12 -m venv .venv
-.venv/bin/python -m pip install --upgrade pip
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python -m ipykernel install --prefix .venv --name secondorder --display-name "Python 3.12 SecondOrder"
 .venv/bin/python -m pytest -q
 .venv/bin/python -m jupyterlab main.ipynb
 ```
 
-In JupyterLab choose the **Python 3.12 SecondOrder** kernel. Use Kernel > Restart
-Kernel and Run All Cells. Open the comparison figure and final exported table.
-Edit UBI or tax in `data/scenarios.json`, then restart and run all cells again.
-Run outputs are written under `outputs/`; input and reference files are included.
-Open supporting `.py` modules in VS Code for editing.
+## Run the notebook
 
-Optional research pilot, from the project directory with the venv activated:
+1. In JupyterLab, select the **Python 3.12 SecondOrder** kernel. Choose **Kernel → Restart Kernel and Run All Cells**.
+2. Inspect the annual table, four-policy plot, paired comparison, and sensitivity sweep. The final cell prints `CSV round trip verified: 11 annual rows`.
+3. In the file browser, open `outputs/policy_comparison.png`, `outputs/ubi_500.csv`, and `outputs/ubi_500.config.json`. The CSV includes year zero and ten simulated years. The JSON records the scenario, assumptions, and horizon.
+4. To try a different input, open `data/scenarios.json` in VS Code. In the `ubi_500` entry, change `ubi` from 500 to 750 and save. Keep the scenario name. Restart and run all cells again, inspect the plot and configuration file, then restore the input to 500.
 
-```bash
-python -m research.run_pilot
-```
+Dependencies are listed in [requirements.txt](requirements.txt). NumPy supplies the sensitivity grids and comparisons, pandas handles the annual tables and CSVs, and Matplotlib draws the plots. The remaining dependencies support Jupyter and Pytest. Use VS Code to edit the supporting modules.
 
-Running the simulator requires no Node or API key. To regenerate the TypeScript
-reference data, developers use Node 24: `node reference/generate.mjs`.
+## Repository structure
 
-## Headless checks on Linux
-
-The following setup was tested with Python 3.12.14 on Linux:
-
-```bash
-python3.12 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python -m pip check
-.venv/bin/python -m pytest -q
-```
-
-The notebook workflow test runs in a temporary directory and preserves existing
-outputs. To check Jupyter execution, inline figures and edited inputs in fresh
-Python processes, run:
-
-```bash
-python -m research.validate_notebook
-```
-
-This uses in-process Jupyter channels. On a host with ZeroMQ socket support, use
-`python -m research.validate_notebook --transport tcp` for the standalone kernel
-check. macOS interactive installation checks use the steps above.
-
-## Files
-
-| Path | Purpose |
+| Path | Role |
 | --- | --- |
-| main.ipynb | Main notebook for running and comparing scenarios |
-| scenario.py | Validated EconomicScenario and ModelAssumptions |
-| simulator.py | ScenarioSimulator composition, recurrence and annual generator |
-| analysis.py | Paired comparison, sweep and crossing brackets |
-| io_utils.py | JSON input and CSV plus configuration output |
-| visualization.py | Annual comparison plots |
-| data/scenarios.json | Four artificial policy inputs |
-| tests/test_model.py | Functional and parity tests |
-| reference/ | Attributed upstream TypeScript and generated expectations |
-| research/run_pilot.py | 5 x 5 assumption pairs x 4 policies |
-| research/run_mechanisms.py | Frozen 192-run mechanism experiment |
-| research/verify_mechanisms.py | Independent replay and summary reconstruction |
-| outputs/mechanisms/ | E2 traces, configurations, comparisons and figure |
-| outputs/pilot/ | Annual rows, paired summaries and source hashes |
-| research/run_policy_grids.py | Frozen E3-E5 grids, boundary refinement and fiscal comparison |
-| research/verify_policy_grids.py | Independent annual-trace, ranking, boundary and budget audit |
-| research/restore_grid_evidence.py | Hash-checked restoration of large evidence files |
-| outputs/policy_grids/ | Complete E3-E5 evidence, validation, count tables and figures |
-| docs/ | Model interpretation, validation and next tasks |
+| [main.ipynb](main.ipynb) | Runs and compares scenarios |
+| [scenario.py](scenario.py) and [simulator.py](simulator.py) | Validate inputs and compute the annual recurrence |
+| [analysis.py](analysis.py) | Aligns years, compares runs, sweeps parameters, and finds crossing brackets |
+| [io_utils.py](io_utils.py) and [visualization.py](visualization.py) | Read JSON, export CSV with its configuration, and plot results |
+| [data/](data/) and [reference/](reference/) | Policy inputs and pinned TypeScript reference values |
+| [tests/](tests/) | Model, boundary, export, and research checks |
+| [research/](research/) and [outputs/](outputs/) | Experiment scripts, records, and figures |
+| [docs/](docs/) | Model notes and validation |
 
-## Course requirement mapping
+## Validation
 
-| Part 1 | Implementation evidence |
+The 54 tests check the yearly update order, boundary cases, invalid inputs, and CSV exports. They also compare 715 values with the TypeScript model. On macOS, the notebook ran from a fresh Jupyter kernel with the default inputs and a second set of inputs. See the [cross-platform acceptance runs](https://github.com/ElaineYiyaoLiu/AAI551-SecondOrder/actions/workflows/course-acceptance.yml) and [validation report](docs/validation_report.json).
+
+Run the same standalone check from the project directory with the virtual environment’s interpreter.
+
+```bash
+python -m research.validate_notebook --transport tcp
+```
+
+## Course requirements
+
+| Part 1 | Where to check |
 | --- | --- |
-| 1 Classes and relationship | ScenarioSimulator contains EconomicScenario and ModelAssumptions; constructors, validation and run methods |
-| 2 Functions | compare_runs, sensitivity_sweep and crossing_brackets in analysis.py |
-| 3 Libraries | NumPy grid and comparison, Pandas records/I/O, Matplotlib figures |
-| 4 Exceptions and Pytest | ValueError for invalid input; FileNotFoundError for absent input; notebook catches both; tests verify behavior |
-| 5 I/O | data/scenarios.json to annual CSV and configuration sidecar; notebook reads export back |
-| 6 Loops and conditions | Annual recurrence, sweep and pilot loops; validation and mechanism branches |
-| 7 Data types | Lists of policies, dictionaries of rows, numeric values, names and tuple field lists |
-| 8 Special methods | `EconomicScenario.__str__`; dataclass-generated fieldwise `__eq__` |
-| 9 Documentation | Module headers, class/function docstrings and model_spec.md |
-| 10 `__name__` | scenario.py, simulator.py and research/run_pilot.py entry guards |
+| 1. Related classes | `ScenarioSimulator` contains an `EconomicScenario` and `ModelAssumptions`. These classes validate the inputs and run the model. |
+| 2. Functions | `compare_runs`, `sensitivity_sweep`, and `crossing_brackets` in `analysis.py` support the comparisons. |
+| 3. Advanced libraries | NumPy builds grids and checks values, pandas handles records and CSV, and Matplotlib plots policy paths. |
+| 4. Exceptions and tests | The notebook catches `ValueError` for invalid parameters and `FileNotFoundError` for an absent input. Pytest checks both and verifies model behavior. |
+| 5. Data I/O | The notebook reads scenario JSON, writes CSV and configuration JSON, then reads the CSV back. |
+| 6. Loops and conditions | The simulator iterates through years and applies feedback, dividend, and clipping branches. The analysis iterates through a parameter sweep. |
+| 7. Data types | A list stores scenarios and dictionaries store annual records. Numeric inputs and string names identify cases, and a tuple holds reference field names. |
+| 8. Special methods | `EconomicScenario.__str__` formats the inputs. The dataclass supplies fieldwise `__eq__`. |
+| 9. Documentation | Module headers, docstrings, and comments explain the code. The model specification records units and update order. |
+| 10. `__name__` | `scenario.py`, `simulator.py`, and `research/run_pilot.py` have direct-execution guards. |
 
-Part 2 uses these four components: comprehensions in input and pilot processing;
-standard library json/pathlib/dataclasses; annual_records generator; zip in
-validation, brackets, plots and paired pilot processing.
+| Part 2 | Where to check |
+| --- | --- |
+| Comprehensions | `main.ipynb` collects runs by policy name. |
+| Standard library | `io_utils.py` reads and writes JSON with `json` and handles paths with `pathlib`. |
+| Generator | `ScenarioSimulator.annual_records` yields one annual record at a time. |
+| Special function | `analysis.crossing_brackets` uses `zip` to pair adjacent sample coordinates and differences. |
 
-Rubric: numerical parity and edge cases address correctness (20); mappings above
-address Part 1 (20) and Part 2 (10). Separate modules, meaningful names and
-docstrings address code quality (20). This README, inputs and setup support
-documentation (8). Pitch (5) and live demonstration (7) require the future video.
-The video and remaining execution checks are pending.
+See the [tests](tests/) and [validation report](docs/validation_report.json) for the checks, and the [project video](#project-video) for the live demo.
 
-## Sources and authorship
+## Model source and project member
 
-The simulator implements the equations from [SecondOrder Scenario](https://github.com/ElaineYiyaoLiu/secondorder-site-public/tree/fbec49b96bf875dfa469e170f682d4659e656fd3/apps/scenario) in Python. The original equations are in `lib/model.ts`, and the parameter bounds are in `lib/scenario.ts`. The reference source and generated outputs are included in `reference/` for numerical comparison.
+The Python implementation follows the pinned [SecondOrder TypeScript model](https://github.com/ElaineYiyaoLiu/secondorder-site-public/tree/fbec49b96bf875dfa469e170f682d4659e656fd3/apps/scenario). The policy inputs are manually specified illustrative scenarios developed with AI assistance. The simulator generates the output data. See the [model specification](docs/model_spec.md) for units and assumptions. To regenerate the TypeScript reference values, run `node reference/generate.mjs` with Node 24.
 
-Policy inputs are manually specified illustrative scenarios developed with AI assistance. Output data are generated by the simulator; no observed macroeconomic dataset is used. Units and assumptions are documented in `docs/model_spec.md`.
+Elaine Liu developed the original model and its Python version, including the notebook, tests, and experiments. The instructor approved individual work and the use of AI assistance for code, documentation, tests, and analysis.
 
-Author: Elaine Liu. AI assistance was used for code drafting, documentation, test design, and exploratory analysis. Individual work and AI use have been approved by the instructor.
-
-- Email: to be added before submission.
-- Stevens ID: to be added before submission.
+| Name | Stevens email | Stevens ID |
+| --- | --- | --- |
+| Elaine Liu | yliu351@stevens.edu | 20029197 |
 
 ## Project Video
 
-YouTube Unlisted link: pending. The video will include a short introduction and a live demonstration of the notebook.
+YouTube Unlisted link pending.
 
 ## Experiments
 
-The experiments cover model checks, demand feedback, policy rankings, boundaries, and budget caps. The frozen design is in `research/protocol.json`; the analytical derivation and its assumptions are in `docs/analytic_response.md`.
+The [mechanism runs](docs/e2_results.md) show what changes when individual model settings are switched off. The [grid results](docs/e3_e5_results.md) show where policy rankings change and which options fit each budget cap. The [protocol](research/protocol.json) records the inputs and comparison rules.
 
-E2 includes 192 independently replayed runs, 2,112 annual rows and 384 mechanism contrasts. Results are in [docs/e2_results.md](docs/e2_results.md). Run `python -m research.verify_mechanisms` to check those saved results.
-
-E3 includes 20,172 runs on the 41 by 41 grids. E4 checks nested 21, 41 and 81 grids and refines all 3,213 candidate edges; E5 retains all 60,516 budget-policy comparisons. Independent verification reconstructs 1,370,776 annual records across grid and refinement runs, checks every grid summary and comparison, and replays 832 selected grid paths and 6,030 distinct boundary endpoint paths. No bracket is unresolved. Results and three figures are in [docs/e3_e5_results.md](docs/e3_e5_results.md).
-
-After a fresh checkout, restore the large evidence files from the included parts before auditing or rebuilding research figures. This uses only repository files and verifies their hashes:
+From the repository root, use the virtual environment to restore and verify the saved evidence. Restoration verifies the included file hashes and needs about 125 MB of additional space.
 
 ```bash
+python -m research.verify_mechanisms
 python -m research.restore_grid_evidence
 python -m research.verify_policy_grids
 python -m research.analyze_policy_grids
 ```
-
-These research audits are separate from the short notebook demonstration and can take several minutes. Restoration needs about 125 MB of additional disk space. To recompute the experiments, move or preserve `outputs/policy_grids/` and then run `python -m research.run_policy_grids`, followed by verification and analysis. Completed result directories are protected from overwriting. Source hashes, complete resolved configurations, annual traces, pairwise signs and ties, boundary endpoints, fiscal outcomes and validation evidence are retained.
-
-The remaining course work is the macOS check, contact details, and the video. See [docs/NEXT_STEPS.md](docs/NEXT_STEPS.md).
